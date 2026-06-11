@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TUPA Wiki 시스템</title>
-<meta name="description" content="TUPA Lab의 주간 리포트 + LLM-Wiki 시스템 안내.">
+<title>TUPA Lab</title>
+<meta name="description" content="TUPA Lab 구성원 허브 — 대시보드 · 주간 리포트 · LLM-Wiki · 연구실 홈페이지.">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,13 +112,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 footer a{color:var(--navy-soft);text-decoration:none}
 @media(max-width:820px){.grid3,.steps,.groups{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.grid3,.steps,.groups,.stats,.fields{grid-template-columns:1fr}}
+.hub{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:.4rem}
+.hubcard{display:flex;flex-direction:column;gap:.4rem;padding:1.4rem 1.5rem;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none;color:inherit;border-top:4px solid var(--c,var(--navy));transition:transform .2s,box-shadow .2s}
+.hubcard:hover{transform:translateY(-3px);box-shadow:0 14px 34px oklch(0.28 0.09 262/.12)}
+.hc-ic{font-size:1.6rem;line-height:1}
+.hubcard h3{font-size:1.14rem;font-weight:700;color:var(--navy-deep);letter-spacing:-.01em}
+.hubcard p{font-size:.9rem;color:var(--ink-soft);line-height:1.5;flex:1}
+.hc-go{font-family:var(--f-mono);font-size:.74rem;color:var(--navy-soft);font-weight:600}
+@media(max-width:560px){.hub{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="topbar"></div>
 <nav><div class="wrap">
   <span class="mark">KAIST · TUPA</span>
-  <a href="#groups" data-ko="연구 그룹" data-en="Research Groups">연구 그룹</a><a href="#report" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="#wiki">LLM-Wiki</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a>
+  <a href="#groups" data-ko="연구 그룹" data-en="Research Groups">연구 그룹</a><a href="#report" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="#wiki">LLM-Wiki</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
   <span class="sp"></span>
   <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
   <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
@@ -126,8 +134,8 @@ footer a{color:var(--navy-soft);text-decoration:none}
 
 <header class="hero"><div class="wrap">
   <div class="eyebrow">KAIST · TUPA LAB</div>
-  <h1 data-ko="TUPA Wiki 시스템" data-en="TUPA Wiki System">TUPA Wiki 시스템</h1>
-  <p class="lede" data-ko="연구실의 <strong>주간 리포트</strong>와 <strong>논문 지식(LLM-Wiki)</strong>을 한 시스템으로 운영합니다." data-en="We run the lab's <strong>weekly reports</strong> and <strong>paper knowledge (LLM-Wiki)</strong> in one system.">연구실의 <strong>주간 리포트</strong>와 <strong>논문 지식(LLM-Wiki)</strong>을 한 시스템으로 운영합니다.</p>
+  <h1 data-ko="TUPA Lab <em>구성원 허브</em>" data-en="TUPA Lab <em>Member Hub</em>">TUPA Lab <em>구성원 허브</em></h1>
+  <p class="lede" data-ko="처음 온 분도, 기존 구성원도 — 여기서 <strong>대시보드 · 주간 리포트 · LLM-Wiki · 연구실 홈페이지</strong>로 바로 이동하세요." data-en="New or current member — jump from here to the <strong>dashboard, weekly report, LLM-Wiki, and lab homepage</strong>.">처음 온 분도, 기존 구성원도 — 여기서 <strong>대시보드 · 주간 리포트 · LLM-Wiki · 연구실 홈페이지</strong>로 바로 이동하세요.</p>
   <div class="stats">
     <div class="stat"><div class="n">4</div><div class="l" data-ko="연구 그룹" data-en="Research Groups">연구 그룹</div></div>
     <div class="stat"><div class="n">22</div><div class="l" data-ko="리포트 멤버" data-en="Report Members">리포트 멤버</div></div>
@@ -135,6 +143,38 @@ footer a{color:var(--navy-soft);text-decoration:none}
     <div class="stat"><div class="n">∞</div><div class="l" data-ko="논문 누적" data-en="Papers">논문 누적</div></div>
   </div>
 </div></header>
+
+<section id="hub"><div class="wrap">
+  <div class="sec-eyebrow" data-ko="바로가기" data-en="Quick Links">바로가기</div>
+  <h2 data-ko="어디로 갈까요?" data-en="Where to?">어디로 갈까요?</h2>
+  <p class="sec-sub" data-ko="연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요." data-en="A starting point for lab members — go straight to what you need.">연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요.</p>
+  <div class="hub">
+    <a class="hubcard" style="--c:var(--navy)" href="https://inhi.kim/" target="_blank">
+      <div class="hc-ic">🏠</div>
+      <h3 data-ko="연구실 홈페이지" data-en="Lab Homepage">연구실 홈페이지</h3>
+      <p data-ko="TUPA Lab 공식 사이트 — PI 소개 · 연구 · 논문 · 구성원." data-en="The official TUPA Lab site — PI, research, publications, members.">TUPA Lab 공식 사이트 — PI 소개 · 연구 · 논문 · 구성원.</p>
+      <span class="hc-go">inhi.kim ↗</span>
+    </a>
+    <a class="hubcard" style="--c:var(--physical)" href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank">
+      <div class="hc-ic">📊</div>
+      <h3 data-ko="라이브 대시보드" data-en="Live Dashboard">라이브 대시보드</h3>
+      <p data-ko="그룹 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 캘린더를 실시간으로." data-en="Group status, project schedules, research, submission status, calendar — live.">그룹 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 캘린더를 실시간으로.</p>
+      <span class="hc-go" data-ko="대시보드 열기 ↗" data-en="Open dashboard ↗">대시보드 열기 ↗</span>
+    </a>
+    <a class="hubcard" style="--c:var(--transport)" href="https://app.notion.com/p/eb187c2bfeed4b7aa4c44ca6f6ed81de" target="_blank">
+      <div class="hc-ic">📝</div>
+      <h3 data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</h3>
+      <p data-ko="매주 진행상황을 노션에 작성합니다. 작성법은 아래 ② 참고." data-en="Write your weekly progress in Notion. See section ② below for how.">매주 진행상황을 노션에 작성합니다. 작성법은 아래 ② 참고.</p>
+      <span class="hc-go" data-ko="노션에서 작성 ↗" data-en="Write in Notion ↗">노션에서 작성 ↗</span>
+    </a>
+    <a class="hubcard" style="--c:var(--erc)" href="https://github.com/hyunchul176/tupa-llm-wiki" target="_blank">
+      <div class="hc-ic">📚</div>
+      <h3>LLM-Wiki</h3>
+      <p data-ko="읽은 논문을 요약·구조화해 각자 쌓는 지식베이스. 설명은 아래 ③ 참고." data-en="A personal knowledge base built from papers you read. See section ③ below.">읽은 논문을 요약·구조화해 각자 쌓는 지식베이스. 설명은 아래 ③ 참고.</p>
+      <span class="hc-go" data-ko="스타터 받기 ↗" data-en="Get the starter ↗">스타터 받기 ↗</span>
+    </a>
+  </div>
+</div></section>
 
 <section id="groups"><div class="wrap">
   <div class="sec-eyebrow" data-ko='<span class="num">01</span> · 연구 그룹' data-en='<span class="num">01</span> · Research Groups'><span class="num">01</span> · 연구 그룹</div>
@@ -203,7 +243,7 @@ footer a{color:var(--navy-soft);text-decoration:none}
 
 <footer><div class="wrap">
   <span data-ko="TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC" data-en="TUPA Lab · KAIST Cho Chun Shik Graduate School of Mobility<br>Transport · Autonomous Driving · Humanoid · ERC">TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC</span>
-  <span data-ko="TUPA Wiki 시스템" data-en="TUPA Wiki System">TUPA Wiki 시스템</span>
+  <span data-ko="TUPA Lab · 구성원 허브" data-en="TUPA Lab · Member Hub">TUPA Lab · 구성원 허브</span>
 </div></footer>
 
 <script>
@@ -220,7 +260,7 @@ footer a{color:var(--navy-soft);text-decoration:none}
       el.innerHTML = lang==='en' ? el.getAttribute('data-en') : el.getAttribute('data-ko');
     });
     root.setAttribute('lang', lang);
-    document.title = lang==='en' ? 'TUPA Wiki System' : 'TUPA Wiki 시스템';
+    document.title = 'TUPA Lab';
     if(lbtn) lbtn.textContent = lang==='en' ? '한' : 'EN';
   }
   applyLang();
