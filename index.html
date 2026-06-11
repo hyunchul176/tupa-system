@@ -118,101 +118,113 @@ footer a{color:var(--navy-soft);text-decoration:none}
 <div class="topbar"></div>
 <nav><div class="wrap">
   <span class="mark">KAIST · TUPA</span>
-  <a href="#groups">연구 그룹</a><a href="#report">주간 리포트</a><a href="#wiki">LLM-Wiki</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank">대시보드 ↗</a>
+  <a href="#groups" data-ko="연구 그룹" data-en="Research Groups">연구 그룹</a><a href="#report" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="#wiki">LLM-Wiki</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a>
   <span class="sp"></span>
+  <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
   <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
 </div></nav>
 
 <header class="hero"><div class="wrap">
   <div class="eyebrow">KAIST · TUPA LAB</div>
-  <h1>TUPA Wiki 시스템</h1>
-  <p class="lede">연구실의 <strong>주간 리포트</strong>와 <strong>논문 지식(LLM-Wiki)</strong>을 한 시스템으로 운영합니다.</p>
+  <h1 data-ko="TUPA Wiki 시스템" data-en="TUPA Wiki System">TUPA Wiki 시스템</h1>
+  <p class="lede" data-ko="연구실의 <strong>주간 리포트</strong>와 <strong>논문 지식(LLM-Wiki)</strong>을 한 시스템으로 운영합니다." data-en="We run the lab's <strong>weekly reports</strong> and <strong>paper knowledge (LLM-Wiki)</strong> in one system.">연구실의 <strong>주간 리포트</strong>와 <strong>논문 지식(LLM-Wiki)</strong>을 한 시스템으로 운영합니다.</p>
   <div class="stats">
-    <div class="stat"><div class="n">4</div><div class="l">연구 그룹</div></div>
-    <div class="stat"><div class="n">22</div><div class="l">리포트 멤버</div></div>
-    <div class="stat"><div class="n">3<small>층</small></div><div class="l">지식 체인</div></div>
-    <div class="stat"><div class="n">∞</div><div class="l">논문 누적</div></div>
+    <div class="stat"><div class="n">4</div><div class="l" data-ko="연구 그룹" data-en="Research Groups">연구 그룹</div></div>
+    <div class="stat"><div class="n">22</div><div class="l" data-ko="리포트 멤버" data-en="Report Members">리포트 멤버</div></div>
+    <div class="stat"><div class="n" data-ko="3<small>층</small>" data-en="3<small>layers</small>">3<small>층</small></div><div class="l" data-ko="지식 체인" data-en="Knowledge Chain">지식 체인</div></div>
+    <div class="stat"><div class="n">∞</div><div class="l" data-ko="논문 누적" data-en="Papers">논문 누적</div></div>
   </div>
 </div></header>
 
 <section id="groups"><div class="wrap">
-  <div class="sec-eyebrow"><span class="num">01</span> · 연구 그룹</div>
-  <h2>네 개의 <em>연구 그룹</em></h2>
-  <p class="sec-sub">여러분은 한 그룹에 속해 그룹장과 함께 일합니다. 리포트도 그룹 단위로 묶입니다.</p>
+  <div class="sec-eyebrow" data-ko='<span class="num">01</span> · 연구 그룹' data-en='<span class="num">01</span> · Research Groups'><span class="num">01</span> · 연구 그룹</div>
+  <h2 data-ko="네 개의 <em>연구 그룹</em>" data-en="Four <em>Research Groups</em>">네 개의 <em>연구 그룹</em></h2>
+  <p class="sec-sub" data-ko="여러분은 한 그룹에 속해 그룹장과 함께 일합니다. 리포트도 그룹 단위로 묶입니다." data-en="You belong to one group and work with its lead. Reports are grouped by team too.">여러분은 한 그룹에 속해 그룹장과 함께 일합니다. 리포트도 그룹 단위로 묶입니다.</p>
   <div class="groups">
-    <div class="gp" style="--c:var(--transport)"><h3>🚦 Transport</h3><div class="lead">그룹장 권동현</div><p>교통류·신호·안전·수요예측·시뮬레이션</p><div class="mem"><span class="ld">권동현 ★</span> · 우 팬 · 용휘 · 임등봉 · 황혜지 · 주커신</div></div>
-    <div class="gp" style="--c:var(--infra)"><h3>🛣️ Infra-based AV</h3><div class="lead">그룹장 오태호</div><p>노변센서·V2X·인지·인프라 기반 자율주행</p><div class="mem"><span class="ld">오태호 ★</span> · 마디 · 김 민 · 김준영 · 유예지 · 트루엔</div></div>
-    <div class="gp" style="--c:var(--physical)"><h3>🤖 Physical AI</h3><div class="lead">그룹장 박현철</div><p>휴머노이드·로봇 제어·RL·manipulation</p><div class="mem"><span class="ld">박현철 ★</span> · 임재혁 · 카이한 · 커브 · 김명현</div></div>
-    <div class="gp" style="--c:var(--erc)"><h3>🔬 ERC</h3><div class="lead">그룹장 Reuben Tamakloe</div><p>대형과제·데이터 통합·연계 아키텍처</p><div class="mem"><span class="ld">Reuben Tamakloe ★</span> · 멍리 · 이준욱 · 김정윤 · 문찬우</div></div>
+    <div class="gp" style="--c:var(--transport)"><h3>🚦 Transport</h3><div class="lead" data-ko="그룹장 권동현" data-en="Lead: Donghyun Kwon">그룹장 권동현</div><p data-ko="교통류·신호·안전·수요예측·시뮬레이션" data-en="Traffic flow · signals · safety · demand forecasting · simulation">교통류·신호·안전·수요예측·시뮬레이션</p><div class="mem" data-ko='<span class="ld">권동현 ★</span> · 우 팬 · 용휘 · 임등봉 · 황혜지 · 주커신' data-en='<span class="ld">Donghyun Kwon ★</span> · Fan Wu · Yonghui Liu · Tengfeng Lin · Ng Hui Zhi · Kexin Zhu'><span class="ld">권동현 ★</span> · 우 팬 · 용휘 · 임등봉 · 황혜지 · 주커신</div></div>
+    <div class="gp" style="--c:var(--infra)"><h3>🛣️ Infra-based AV</h3><div class="lead" data-ko="그룹장 오태호" data-en="Lead: Taeho Oh">그룹장 오태호</div><p data-ko="노변센서·V2X·인지·인프라 기반 자율주행" data-en="Roadside sensors · V2X · perception · infrastructure-based AV">노변센서·V2X·인지·인프라 기반 자율주행</p><div class="mem" data-ko='<span class="ld">오태호 ★</span> · 마디 · 김 민 · 김준영 · 유예지 · 트루엔' data-en='<span class="ld">Taeho Oh ★</span> · Mahdi Khorasani · Eric Min Kim · Junyoung Kim · Yegi Yoo · Truyen Le-Minh'><span class="ld">오태호 ★</span> · 마디 · 김 민 · 김준영 · 유예지 · 트루엔</div></div>
+    <div class="gp" style="--c:var(--physical)"><h3>🤖 Physical AI</h3><div class="lead" data-ko="그룹장 박현철" data-en="Lead: Hyunchul Park">그룹장 박현철</div><p data-ko="휴머노이드·로봇 제어·RL·manipulation" data-en="Humanoids · robot control · RL · manipulation">휴머노이드·로봇 제어·RL·manipulation</p><div class="mem" data-ko='<span class="ld">박현철 ★</span> · 임재혁 · 카이한 · 커브 · 김명현' data-en='<span class="ld">Hyunchul Park ★</span> · Jaehyuck Lim · Kaihan Zhang · Kervin Lucas · MyeongHyeon Kim'><span class="ld">박현철 ★</span> · 임재혁 · 카이한 · 커브 · 김명현</div></div>
+    <div class="gp" style="--c:var(--erc)"><h3>🔬 ERC</h3><div class="lead" data-ko="그룹장 Reuben Tamakloe" data-en="Lead: Reuben Tamakloe">그룹장 Reuben Tamakloe</div><p data-ko="대형과제·데이터 통합·연계 아키텍처" data-en="Large-scale projects · data integration · system architecture">대형과제·데이터 통합·연계 아키텍처</p><div class="mem" data-ko='<span class="ld">Reuben Tamakloe ★</span> · 멍리 · 이준욱 · 김정윤 · 문찬우' data-en='<span class="ld">Reuben Tamakloe ★</span> · Meng Li · Junyuk Lee · JungYoon Kim · ChanWoo Moon'><span class="ld">Reuben Tamakloe ★</span> · 멍리 · 이준욱 · 김정윤 · 문찬우</div></div>
   </div>
 </div></section>
 
 <section id="report"><div class="wrap">
-  <div class="sec-eyebrow"><span class="num">02</span> · 주간 리포트</div>
-  <h2>매주 <em>리포트</em>를 씁니다</h2>
-  <p class="sec-sub">각자 한 주의 진행상황을 Notion에 작성하면, AI가 그룹별로 종합해 교수님이 피드백을 줍니다.</p>
-  <a class="btn-notion" href="https://app.notion.com/p/eb187c2bfeed4b7aa4c44ca6f6ed81de" target="_blank">📋 주간 리포트 DB 열기 →</a>
+  <div class="sec-eyebrow" data-ko='<span class="num">02</span> · 주간 리포트' data-en='<span class="num">02</span> · Weekly Report'><span class="num">02</span> · 주간 리포트</div>
+  <h2 data-ko="매주 <em>리포트</em>를 씁니다" data-en="Write a <em>report</em> every week">매주 <em>리포트</em>를 씁니다</h2>
+  <p class="sec-sub" data-ko="각자 한 주의 진행상황을 Notion에 작성하면, AI가 그룹별로 종합해 교수님이 피드백을 줍니다." data-en="Each member writes their weekly progress in Notion; AI summarizes it by group and the professor gives feedback.">각자 한 주의 진행상황을 Notion에 작성하면, AI가 그룹별로 종합해 교수님이 피드백을 줍니다.</p>
+  <a class="btn-notion" href="https://app.notion.com/p/eb187c2bfeed4b7aa4c44ca6f6ed81de" target="_blank" data-ko="📋 주간 리포트 DB 열기 →" data-en="📋 Open Weekly Report DB →">📋 주간 리포트 DB 열기 →</a>
   <div class="steps">
-    <div class="step"><div class="stepn">1</div><h3>내 항목 열기</h3><p>"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.</p></div>
-    <div class="step"><div class="stepn">2</div><h3>칸 채우기</h3><p>아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝.</p></div>
-    <div class="step"><div class="stepn">3</div><h3>제출완료로</h3><p>다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다.</p></div>
+    <div class="step"><div class="stepn">1</div><h3 data-ko="내 항목 열기" data-en="Open your entry">내 항목 열기</h3><p data-ko='"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.' data-en='Open your <b>name + this week</b> entry in the Weekly Report DB. It is created for you each week.'>"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.</p></div>
+    <div class="step"><div class="stepn">2</div><h3 data-ko="칸 채우기" data-en="Fill the fields">칸 채우기</h3><p data-ko="아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝." data-en="Fill in the items below — all within Notion, no other tools.">아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝.</p></div>
+    <div class="step"><div class="stepn">3</div><h3 data-ko="제출완료로" data-en="Mark as submitted">제출완료로</h3><p data-ko="다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다." data-en="When done, set the status to <code>제출완료</code> (Submitted). The rest is automatic.">다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다.</p></div>
   </div>
 
-  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem"><strong>리포트 항목</strong></p>
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>리포트 항목</strong>" data-en="<strong>Report fields</strong>"><strong>리포트 항목</strong></p>
   <ul class="fields">
-    <li><b>1.</b> 이번 주 한 일</li>
-    <li><b>2.</b> 진행 중</li>
-    <li><b>3.</b> 막힌 것 / 도움 필요</li>
-    <li><b>4.</b> 다음 주 계획</li>
-    <li><b>5.</b> 관련 논문 · 위키 노트</li>
-    <li><b>6.</b> 검토 필요사항</li>
+    <li data-ko="<b>1.</b> 이번 주 한 일" data-en="<b>1.</b> What I did this week"><b>1.</b> 이번 주 한 일</li>
+    <li data-ko="<b>2.</b> 진행 중" data-en="<b>2.</b> In progress"><b>2.</b> 진행 중</li>
+    <li data-ko="<b>3.</b> 막힌 것 / 도움 필요" data-en="<b>3.</b> Blocked / need help"><b>3.</b> 막힌 것 / 도움 필요</li>
+    <li data-ko="<b>4.</b> 다음 주 계획" data-en="<b>4.</b> Next week's plan"><b>4.</b> 다음 주 계획</li>
+    <li data-ko="<b>5.</b> 관련 논문 · 위키 노트" data-en="<b>5.</b> Related papers · wiki notes"><b>5.</b> 관련 논문 · 위키 노트</li>
+    <li data-ko="<b>6.</b> 검토 필요사항" data-en="<b>6.</b> Items needing review"><b>6.</b> 검토 필요사항</li>
   </ul>
 
-  <div class="callout"><b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다.</div>
+  <div class="callout" data-ko="<b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다." data-en="<b>Deadline: every Friday 5 PM.</b> Each group lead checks members' submission status regularly."><b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다.</div>
 
-  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:0"><strong>제출하면 어디로 가나</strong></p>
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:0" data-ko="<strong>제출하면 어디로 가나</strong>" data-en="<strong>Where it goes after you submit</strong>"><strong>제출하면 어디로 가나</strong></p>
   <div class="flow">
-    <span class="fbox">내 리포트</span><span class="farr">→</span>
-    <span class="fbox k">AI가 그룹별 종합</span><span class="farr">→</span>
-    <span class="fbox">교수님 확인 · 피드백</span><span class="farr">→</span>
-    <span class="fbox">내 리포트에 댓글</span>
+    <span class="fbox" data-ko="내 리포트" data-en="My report">내 리포트</span><span class="farr">→</span>
+    <span class="fbox k" data-ko="AI가 그룹별 종합" data-en="AI summarizes by group">AI가 그룹별 종합</span><span class="farr">→</span>
+    <span class="fbox" data-ko="교수님 확인 · 피드백" data-en="Professor reviews · feedback">교수님 확인 · 피드백</span><span class="farr">→</span>
+    <span class="fbox" data-ko="내 리포트에 댓글" data-en="Comment on my report">내 리포트에 댓글</span>
   </div>
 
-  <p class="sec-sub" style="margin-top:1.9rem;margin-bottom:.4rem"><strong>한눈에 보는 라이브 대시보드</strong></p>
-  <p class="sec-sub" style="margin-top:0">그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다.</p>
-  <a class="btn-notion" href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank">📊 라이브 대시보드 열기 →</a>
+  <p class="sec-sub" style="margin-top:1.9rem;margin-bottom:.4rem" data-ko="<strong>한눈에 보는 라이브 대시보드</strong>" data-en="<strong>Live dashboard at a glance</strong>"><strong>한눈에 보는 라이브 대시보드</strong></p>
+  <p class="sec-sub" style="margin-top:0" data-ko="그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다." data-en="Group status · project schedules · individual research · submission status · calendar — all in real time. Notion edits appear within <b>~1 minute</b>.">그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다.</p>
+  <a class="btn-notion" href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="📊 라이브 대시보드 열기 →" data-en="📊 Open live dashboard →">📊 라이브 대시보드 열기 →</a>
 </div></section>
 
 <section id="wiki"><div class="wrap">
   <div class="sec-eyebrow"><span class="num">03</span> · LLM-Wiki</div>
-  <h2>각자 쌓는 <em>논문 지식</em></h2>
-  <p class="sec-sub">읽은 논문을 AI가 요약·구조화해 <b>각자의 위키</b>에 쌓습니다. 논문 한 편 = <code>papers</code>(원본 PDF) + <code>sources</code>(요약) + <code>wiki</code>(구조화 노트). 노트끼리 <code>[[백링크]]</code>로 연결돼 쌓일수록 "분야 지도"가 됩니다.</p>
-  <a class="btn-notion" href="https://github.com/hyunchul176/tupa-llm-wiki" target="_blank">🧩 개인 위키 스타터 받기 (GitHub) →</a>
+  <h2 data-ko="각자 쌓는 <em>논문 지식</em>" data-en="Build your own <em>paper knowledge</em>">각자 쌓는 <em>논문 지식</em></h2>
+  <p class="sec-sub" data-ko='읽은 논문을 AI가 요약·구조화해 <b>각자의 위키</b>에 쌓습니다. 논문 한 편 = <code>papers</code>(원본 PDF) + <code>sources</code>(요약) + <code>wiki</code>(구조화 노트). 노트끼리 <code>[[백링크]]</code>로 연결돼 쌓일수록 "분야 지도"가 됩니다.' data-en='AI summarizes and structures the papers you read into <b>your own wiki</b>. One paper = <code>papers</code> (original PDF) + <code>sources</code> (summary) + <code>wiki</code> (structured note). Notes connect via <code>[[backlinks]]</code>, forming a "field map" as they accumulate.'>읽은 논문을 AI가 요약·구조화해 <b>각자의 위키</b>에 쌓습니다. 논문 한 편 = <code>papers</code>(원본 PDF) + <code>sources</code>(요약) + <code>wiki</code>(구조화 노트). 노트끼리 <code>[[백링크]]</code>로 연결돼 쌓일수록 "분야 지도"가 됩니다.</p>
+  <a class="btn-notion" href="https://github.com/hyunchul176/tupa-llm-wiki" target="_blank" data-ko="🧩 개인 위키 스타터 받기 (GitHub) →" data-en="🧩 Get the personal wiki starter (GitHub) →">🧩 개인 위키 스타터 받기 (GitHub) →</a>
   <div class="grid3">
-    <div class="card" style="--c:var(--navy)"><div class="tag">목적</div><h3>왜 쌓나</h3><p>흩어진 PDF를 검색·재사용 가능한 지식으로. 같은 논문을 두 번 읽지 않고, 분야 종합(overview)으로 빠르게 맥락을 잡습니다.</p></div>
-    <div class="card" style="--c:var(--physical)"><div class="tag">활용</div><h3>어떻게 쓰나</h3><p>위키에서 주제·개념·방법을 검색하고, 백링크를 따라 관련 논문을 잇고, overview로 분야 현황을 봅니다. 답변은 웹이 아니라 <b>내 위키를 근거로</b>.</p></div>
-    <div class="card" style="--c:var(--erc)"><div class="tag">시작</div><h3>각자 만들기</h3><p>스타터를 <code>clone</code>해 나만의 위키로 채웁니다. 읽은 논문을 <b>ingest</b>(아래 한 마디)하면 노트가 자동 생성됩니다.</p></div>
+    <div class="card" style="--c:var(--navy)"><div class="tag" data-ko="목적" data-en="Purpose">목적</div><h3 data-ko="왜 쌓나" data-en="Why build it">왜 쌓나</h3><p data-ko="흩어진 PDF를 검색·재사용 가능한 지식으로. 같은 논문을 두 번 읽지 않고, 분야 종합(overview)으로 빠르게 맥락을 잡습니다." data-en="Turn scattered PDFs into searchable, reusable knowledge. Avoid reading the same paper twice; grasp context fast through field overviews.">흩어진 PDF를 검색·재사용 가능한 지식으로. 같은 논문을 두 번 읽지 않고, 분야 종합(overview)으로 빠르게 맥락을 잡습니다.</p></div>
+    <div class="card" style="--c:var(--physical)"><div class="tag" data-ko="활용" data-en="Use">활용</div><h3 data-ko="어떻게 쓰나" data-en="How to use">어떻게 쓰나</h3><p data-ko="위키에서 주제·개념·방법을 검색하고, 백링크를 따라 관련 논문을 잇고, overview로 분야 현황을 봅니다. 답변은 웹이 아니라 <b>내 위키를 근거로</b>." data-en="Search topics·concepts·methods in the wiki, follow backlinks to related papers, and view the field via overviews. Answers are grounded in <b>your wiki</b>, not the web.">위키에서 주제·개념·방법을 검색하고, 백링크를 따라 관련 논문을 잇고, overview로 분야 현황을 봅니다. 답변은 웹이 아니라 <b>내 위키를 근거로</b>.</p></div>
+    <div class="card" style="--c:var(--erc)"><div class="tag" data-ko="시작" data-en="Start">시작</div><h3 data-ko="각자 만들기" data-en="Build your own">각자 만들기</h3><p data-ko="스타터를 <code>clone</code>해 나만의 위키로 채웁니다. 읽은 논문을 <b>ingest</b>(아래 한 마디)하면 노트가 자동 생성됩니다." data-en="Clone the starter and fill your own wiki. <b>ingest</b> a paper you read (one line below) and notes are created automatically.">스타터를 <code>clone</code>해 나만의 위키로 채웁니다. 읽은 논문을 <b>ingest</b>(아래 한 마디)하면 노트가 자동 생성됩니다.</p></div>
   </div>
 
-  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem"><strong>논문 한 편 넣기</strong></p>
-  <div class="flow"><span class="fbox">PDF / DOI</span><span class="farr">→</span><span class="fbox k">"이 PDF ingest해줘"</span><span class="farr">→</span><span class="fbox">papers · sources · wiki 자동 생성</span><span class="farr">→</span><span class="fbox">백링크·overview 연결</span></div>
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>논문 한 편 넣기</strong>" data-en="<strong>Add a paper</strong>"><strong>논문 한 편 넣기</strong></p>
+  <div class="flow"><span class="fbox">PDF / DOI</span><span class="farr">→</span><span class="fbox k" data-ko='"이 PDF ingest해줘"' data-en='"ingest this PDF"'>"이 PDF ingest해줘"</span><span class="farr">→</span><span class="fbox" data-ko="papers · sources · wiki 자동 생성" data-en="auto-create papers · sources · wiki">papers · sources · wiki 자동 생성</span><span class="farr">→</span><span class="fbox" data-ko="백링크·overview 연결" data-en="link backlinks · overview">백링크·overview 연결</span></div>
 
-  <div class="callout" style="border-left-color:var(--erc)"><b>운영 방침 — 1단계: 각자 구축.</b> 먼저 <b>최소 한 달</b> 동안 각자 자기 위키를 쌓으며 흐름을 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다.</div>
+  <div class="callout" style="border-left-color:var(--erc)" data-ko="<b>운영 방침 — 1단계: 각자 구축.</b> 먼저 <b>최소 한 달</b> 동안 각자 자기 위키를 쌓으며 흐름을 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다." data-en="<b>Policy — Phase 1: build individually.</b> For at least one month, each member builds their own wiki and learns the workflow. <b>Phase 2: merge by group.</b> Once comfortable, groups combine their wikis into a shared knowledge map."><b>운영 방침 — 1단계: 각자 구축.</b> 먼저 <b>최소 한 달</b> 동안 각자 자기 위키를 쌓으며 흐름을 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다.</div>
 </div></section>
 
 <footer><div class="wrap">
-  <span>TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC</span>
-  <span>TUPA Wiki 시스템</span>
+  <span data-ko="TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC" data-en="TUPA Lab · KAIST Cho Chun Shik Graduate School of Mobility<br>Transport · Autonomous Driving · Humanoid · ERC">TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC</span>
+  <span data-ko="TUPA Wiki 시스템" data-en="TUPA Wiki System">TUPA Wiki 시스템</span>
 </div></footer>
 
 <script>
-  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  var root=document.documentElement, btn=document.getElementById('themeBtn'), lbtn=document.getElementById('langBtn');
   function sync(){btn.textContent=root.getAttribute('data-theme')==='dark'?'☀️':'🌙';}
   sync();
   btn.onclick=function(){
     var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
     root.setAttribute('data-theme',t); localStorage.setItem('tupa-theme',t); sync();
   };
+  var lang=localStorage.getItem('tupa-lang')||'ko';
+  function applyLang(){
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      el.innerHTML = lang==='en' ? el.getAttribute('data-en') : el.getAttribute('data-ko');
+    });
+    root.setAttribute('lang', lang);
+    document.title = lang==='en' ? 'TUPA Wiki System' : 'TUPA Wiki 시스템';
+    if(lbtn) lbtn.textContent = lang==='en' ? '한' : 'EN';
+  }
+  applyLang();
+  if(lbtn) lbtn.onclick=function(){ lang=lang==='en'?'ko':'en'; localStorage.setItem('tupa-lang',lang); applyLang(); };
 </script>
 </body>
 </html>
