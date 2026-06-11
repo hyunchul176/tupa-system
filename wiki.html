@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM-Wiki · TUPA Lab</title>
+<meta name="description" content="TUPA Lab LLM-Wiki — 논문을 요약·구조화해 각자 쌓는 지식베이스.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var s=localStorage.getItem('tupa-theme');var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+<link rel="stylesheet" href="tupa.css">
+</head>
+<body>
+<div class="topbar"></div>
+<nav><div class="wrap">
+  <a class="mark" href="index.html">KAIST · TUPA</a>
+  <a href="index.html" data-ko="← 허브" data-en="← Hub">← 허브</a><a href="report.html" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
+  <span class="sp"></span>
+  <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
+  <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">TUPA LAB · LLM-WIKI</div>
+  <h1 data-ko="각자 쌓는 <em>논문 지식</em>" data-en="Build your own <em>paper knowledge</em>">각자 쌓는 <em>논문 지식</em></h1>
+  <p class="lede" data-ko='읽은 논문을 AI가 요약·구조화해 <strong>각자의 위키</strong>에 쌓습니다. 노트끼리 백링크로 연결돼 쌓일수록 "분야 지도"가 됩니다.' data-en='AI summarizes and structures the papers you read into <strong>your own wiki</strong>. Notes connect via backlinks, forming a "field map" as they accumulate.'>읽은 논문을 AI가 요약·구조화해 <strong>각자의 위키</strong>에 쌓습니다. 노트끼리 백링크로 연결돼 쌓일수록 "분야 지도"가 됩니다.</p>
+</div></header>
+
+<section><div class="wrap">
+  <p class="sec-sub" data-ko='논문 한 편 = <code>papers</code>(원본 PDF) + <code>sources</code>(요약) + <code>wiki</code>(구조화 노트). 같은 정보를 세 방식으로 검색·연결합니다.' data-en='One paper = <code>papers</code> (original PDF) + <code>sources</code> (summary) + <code>wiki</code> (structured note) — the same information searchable and linked three ways.'>논문 한 편 = <code>papers</code>(원본 PDF) + <code>sources</code>(요약) + <code>wiki</code>(구조화 노트). 같은 정보를 세 방식으로 검색·연결합니다.</p>
+  <a class="btn-notion" href="https://github.com/hyunchul176/tupa-llm-wiki" target="_blank" data-ko="🧩 개인 위키 스타터 받기 (GitHub) →" data-en="🧩 Get the personal wiki starter (GitHub) →">🧩 개인 위키 스타터 받기 (GitHub) →</a>
+  <div class="grid3">
+    <div class="card" style="--c:var(--navy)"><div class="tag" data-ko="목적" data-en="Purpose">목적</div><h3 data-ko="왜 쌓나" data-en="Why build it">왜 쌓나</h3><p data-ko="흩어진 PDF를 검색·재사용 가능한 지식으로. 같은 논문을 두 번 읽지 않고, 분야 종합(overview)으로 빠르게 맥락을 잡습니다." data-en="Turn scattered PDFs into searchable, reusable knowledge. Avoid reading the same paper twice; grasp context fast through field overviews.">흩어진 PDF를 검색·재사용 가능한 지식으로. 같은 논문을 두 번 읽지 않고, 분야 종합(overview)으로 빠르게 맥락을 잡습니다.</p></div>
+    <div class="card" style="--c:var(--physical)"><div class="tag" data-ko="활용" data-en="Use">활용</div><h3 data-ko="어떻게 쓰나" data-en="How to use">어떻게 쓰나</h3><p data-ko="위키에서 주제·개념·방법을 검색하고, 백링크를 따라 관련 논문을 잇고, overview로 분야 현황을 봅니다. 답변은 웹이 아니라 <b>내 위키를 근거로</b>." data-en="Search topics·concepts·methods in the wiki, follow backlinks to related papers, and view the field via overviews. Answers are grounded in <b>your wiki</b>, not the web.">위키에서 주제·개념·방법을 검색하고, 백링크를 따라 관련 논문을 잇고, overview로 분야 현황을 봅니다. 답변은 웹이 아니라 <b>내 위키를 근거로</b>.</p></div>
+    <div class="card" style="--c:var(--erc)"><div class="tag" data-ko="시작" data-en="Start">시작</div><h3 data-ko="각자 만들기" data-en="Build your own">각자 만들기</h3><p data-ko="스타터를 <code>clone</code>해 나만의 위키로 채웁니다. 읽은 논문을 <b>ingest</b>(아래 한 마디)하면 노트가 자동 생성됩니다." data-en="Clone the starter and fill your own wiki. <b>ingest</b> a paper you read (one line below) and notes are created automatically.">스타터를 <code>clone</code>해 나만의 위키로 채웁니다. 읽은 논문을 <b>ingest</b>(아래 한 마디)하면 노트가 자동 생성됩니다.</p></div>
+  </div>
+
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>논문 한 편 넣기</strong>" data-en="<strong>Add a paper</strong>"><strong>논문 한 편 넣기</strong></p>
+  <div class="flow"><span class="fbox">PDF / DOI</span><span class="farr">→</span><span class="fbox k" data-ko='"이 PDF ingest해줘"' data-en='"ingest this PDF"'>"이 PDF ingest해줘"</span><span class="farr">→</span><span class="fbox" data-ko="papers · sources · wiki 자동 생성" data-en="auto-create papers · sources · wiki">papers · sources · wiki 자동 생성</span><span class="farr">→</span><span class="fbox" data-ko="백링크·overview 연결" data-en="link backlinks · overview">백링크·overview 연결</span></div>
+
+  <div class="callout" style="border-left-color:var(--erc)" data-ko="<b>운영 방침 — 1단계: 각자 구축.</b> 먼저 <b>최소 한 달</b> 동안 각자 자기 위키를 쌓으며 흐름을 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다." data-en="<b>Policy — Phase 1: build individually.</b> For at least one month, each member builds their own wiki and learns the workflow. <b>Phase 2: merge by group.</b> Once comfortable, groups combine their wikis into a shared knowledge map."><b>운영 방침 — 1단계: 각자 구축.</b> 먼저 <b>최소 한 달</b> 동안 각자 자기 위키를 쌓으며 흐름을 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다.</div>
+</div></section>
+
+<footer><div class="wrap">
+  <span data-ko="TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC" data-en="TUPA Lab · KAIST Cho Chun Shik Graduate School of Mobility<br>Transport · Autonomous Driving · Humanoid · ERC">TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC</span>
+  <span><a href="index.html" data-ko="← 허브로" data-en="← Back to hub">← 허브로</a></span>
+</div></footer>
+
+<script src="tupa.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주간 리포트 · TUPA Lab</title>
+<meta name="description" content="TUPA Lab 주간 리포트 작성 안내.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var s=localStorage.getItem('tupa-theme');var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+<link rel="stylesheet" href="tupa.css">
+</head>
+<body>
+<div class="topbar"></div>
+<nav><div class="wrap">
+  <a class="mark" href="index.html">KAIST · TUPA</a>
+  <a href="index.html" data-ko="← 허브" data-en="← Hub">← 허브</a><a href="wiki.html">LLM-Wiki</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
+  <span class="sp"></span>
+  <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
+  <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">TUPA LAB · WEEKLY REPORT</div>
+  <h1 data-ko="매주 <em>리포트</em>를 씁니다" data-en="Write a <em>report</em> every week">매주 <em>리포트</em>를 씁니다</h1>
+  <p class="lede" data-ko="각자 한 주의 진행상황을 Notion에 작성하면, AI가 그룹별로 종합해 교수님이 피드백을 줍니다." data-en="Each member writes their weekly progress in Notion; AI summarizes it by group and the professor gives feedback.">각자 한 주의 진행상황을 Notion에 작성하면, AI가 그룹별로 종합해 교수님이 피드백을 줍니다.</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="callout" data-ko="<b>시작 전 준비:</b> 주간 리포트 작성에는 <b>Notion 로그인</b>과 <b>TUPA 워크스페이스 참여</b>가 필요합니다. 초대를 못 받았다면 그룹장 또는 관리자에게 요청하세요." data-en="<b>Before you start:</b> writing weekly reports requires a <b>Notion login</b> and <b>membership in the TUPA workspace</b>. If you have not been invited, ask your group lead or the admin."><b>시작 전 준비:</b> 주간 리포트 작성에는 <b>Notion 로그인</b>과 <b>TUPA 워크스페이스 참여</b>가 필요합니다. 초대를 못 받았다면 그룹장 또는 관리자에게 요청하세요.</div>
+
+  <p class="sec-sub" style="margin-top:1.6rem;margin-bottom:.4rem" data-ko="<strong>이렇게 작성합니다</strong>" data-en="<strong>How to write</strong>"><strong>이렇게 작성합니다</strong></p>
+  <a class="btn-notion" href="https://app.notion.com/p/eb187c2bfeed4b7aa4c44ca6f6ed81de" target="_blank" data-ko="📋 주간 리포트 DB 열기 →" data-en="📋 Open Weekly Report DB →">📋 주간 리포트 DB 열기 →</a>
+  <div class="steps">
+    <div class="step"><div class="stepn">1</div><h3 data-ko="내 항목 열기" data-en="Open your entry">내 항목 열기</h3><p data-ko='"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.' data-en='Open your <b>name + this week</b> entry in the Weekly Report DB. It is created for you each week.'>"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.</p></div>
+    <div class="step"><div class="stepn">2</div><h3 data-ko="칸 채우기" data-en="Fill the fields">칸 채우기</h3><p data-ko="아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝." data-en="Fill in the items below — all within Notion, no other tools.">아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝.</p></div>
+    <div class="step"><div class="stepn">3</div><h3 data-ko="제출완료로" data-en="Mark as submitted">제출완료로</h3><p data-ko="다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다." data-en="When done, set the status to <code>제출완료</code> (Submitted). The rest is automatic.">다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다.</p></div>
+  </div>
+
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>리포트 항목</strong>" data-en="<strong>Report fields</strong>"><strong>리포트 항목</strong></p>
+  <ul class="fields">
+    <li data-ko="<b>1.</b> 이번 주 한 일" data-en="<b>1.</b> What I did this week"><b>1.</b> 이번 주 한 일</li>
+    <li data-ko="<b>2.</b> 진행 중" data-en="<b>2.</b> In progress"><b>2.</b> 진행 중</li>
+    <li data-ko="<b>3.</b> 막힌 것 / 도움 필요" data-en="<b>3.</b> Blocked / need help"><b>3.</b> 막힌 것 / 도움 필요</li>
+    <li data-ko="<b>4.</b> 다음 주 계획" data-en="<b>4.</b> Next week's plan"><b>4.</b> 다음 주 계획</li>
+    <li data-ko="<b>5.</b> 관련 논문 · 위키 노트" data-en="<b>5.</b> Related papers · wiki notes"><b>5.</b> 관련 논문 · 위키 노트</li>
+    <li data-ko="<b>6.</b> 검토 필요사항" data-en="<b>6.</b> Items needing review"><b>6.</b> 검토 필요사항</li>
+  </ul>
+
+  <div class="callout" data-ko="<b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다." data-en="<b>Deadline: every Friday 5 PM.</b> Each group lead checks members' submission status regularly."><b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다.</div>
+
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:0" data-ko="<strong>제출하면 어디로 가나</strong>" data-en="<strong>Where it goes after you submit</strong>"><strong>제출하면 어디로 가나</strong></p>
+  <div class="flow">
+    <span class="fbox" data-ko="내 리포트" data-en="My report">내 리포트</span><span class="farr">→</span>
+    <span class="fbox k" data-ko="AI가 그룹별 종합" data-en="AI summarizes by group">AI가 그룹별 종합</span><span class="farr">→</span>
+    <span class="fbox" data-ko="교수님 확인 · 피드백" data-en="Professor reviews · feedback">교수님 확인 · 피드백</span><span class="farr">→</span>
+    <span class="fbox" data-ko="내 리포트에 댓글" data-en="Comment on my report">내 리포트에 댓글</span>
+  </div>
+
+  <p class="sec-sub" style="margin-top:1.9rem;margin-bottom:.4rem" data-ko="<strong>한눈에 보는 라이브 대시보드</strong>" data-en="<strong>Live dashboard at a glance</strong>"><strong>한눈에 보는 라이브 대시보드</strong></p>
+  <p class="sec-sub" style="margin-top:0" data-ko="그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다." data-en="Group status · project schedules · individual research · submission status · calendar — all in real time. Notion edits appear within <b>~1 minute</b>.">그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다.</p>
+  <a class="btn-notion" href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="📊 라이브 대시보드 열기 →" data-en="📊 Open live dashboard →">📊 라이브 대시보드 열기 →</a>
+</div></section>
+
+<footer><div class="wrap">
+  <span data-ko="TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC" data-en="TUPA Lab · KAIST Cho Chun Shik Graduate School of Mobility<br>Transport · Autonomous Driving · Humanoid · ERC">TUPA Lab · KAIST 조천식모빌리티대학원<br>교통공학 · 자율주행 · 휴머노이드 · ERC</span>
+  <span><a href="index.html" data-ko="← 허브로" data-en="← Back to hub">← 허브로</a></span>
+</div></footer>
+
+<script src="tupa.js"></script>
+</body>
+</html>
