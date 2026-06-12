@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LLM-Wiki · TUPA Lab</title>
-<meta name="description" content="TUPA Lab LLM-Wiki — 논문을 요약·구조화해 각자 쌓는 지식 운영체제.">
+<meta name="description" content="TUPA Lab LLM-Wiki — 읽은 논문을 검색·재사용 가능한 지식으로 쌓는 법.">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
 <body>
 <div class="topbar"></div>
 <nav><div class="wrap">
-  <a class="mark" href="index.html">KAIST · TUPA</a>
-  <a href="index.html" data-ko="← 허브" data-en="← Hub">← 허브</a><a href="report.html" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
+  <a class="navbrand" href="index.html"><img class="nav-logo" src="tupa-logo.png" alt="TUPA · Transport and Urban Planning Arena"></a>
+  <a href="index.html" data-ko="← 허브" data-en="← Hub">← 허브</a><a href="report.html" data-ko="주간 리포트" data-en="Weekly Report">주간 리포트</a><a href="monitor.html" data-ko="대시보드" data-en="Dashboard">대시보드</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
   <span class="sp"></span>
   <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
   <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
@@ -25,66 +25,64 @@
 <header class="hero"><div class="wrap">
   <div class="eyebrow">TUPA LAB · LLM-WIKI</div>
   <h1 data-ko="각자 쌓는 <em>논문 지식</em>" data-en="Build your own <em>paper knowledge</em>">각자 쌓는 <em>논문 지식</em></h1>
-  <p class="lede" data-ko="읽은 논문을 모아두기만 하는 폴더가 아니라, <strong>검색·연결·종합이 되는 살아있는 지식 운영체제</strong>입니다. 질문에 답할 땐 웹이 아니라 내 위키를 근거로." data-en="Not just a folder of papers — a <strong>living knowledge OS that is searchable, linked, and synthesizable</strong>. Answers are grounded in your wiki, not the web.">읽은 논문을 모아두기만 하는 폴더가 아니라, <strong>검색·연결·종합이 되는 살아있는 지식 운영체제</strong>입니다. 질문에 답할 땐 웹이 아니라 내 위키를 근거로.</p>
+  <p class="lede" data-ko="읽은 논문이 폴더 속에 흩어져 잊히지 않게, AI가 요약·정리해 <strong>언제든 꺼내 쓸 수 있는 지식</strong>으로 쌓습니다." data-en="So the papers you read don't scatter and fade, the AI summarizes and organizes them into <strong>knowledge you can pull up anytime</strong>.">읽은 논문이 폴더 속에 흩어져 잊히지 않게, AI가 요약·정리해 <strong>언제든 꺼내 쓸 수 있는 지식</strong>으로 쌓습니다.</p>
   <a class="btn-notion" style="margin-top:1.4rem" href="https://github.com/hyunchul176/tupa-llm-wiki" target="_blank" data-ko="🧩 개인 위키 스타터 받기 (GitHub) →" data-en="🧩 Get the personal wiki starter (GitHub) →">🧩 개인 위키 스타터 받기 (GitHub) →</a>
 </div></header>
 
 <section><div class="wrap">
-  <div class="sec-eyebrow" data-ko='<span class="num">01</span> · 구조' data-en='<span class="num">01</span> · Structure'><span class="num">01</span> · 구조</div>
-  <h2 data-ko="같은 정보, <em>세 검색 표면</em>" data-en="One source, <em>three search surfaces</em>">같은 정보, <em>세 검색 표면</em></h2>
-  <p class="sec-sub" data-ko="논문 한 편이 세 가지 형태로 저장돼, 상황에 맞게 찾습니다. 세 폴더는 같은 <code>stem</code>(파일명) 규칙으로 묶입니다." data-en="Each paper is stored in three forms so you can find it the right way. The three folders share one <code>stem</code> (filename) rule.">논문 한 편이 세 가지 형태로 저장돼, 상황에 맞게 찾습니다. 세 폴더는 같은 <code>stem</code>(파일명) 규칙으로 묶입니다.</p>
-  <div class="grid3">
-    <div class="card" style="--c:var(--transport)"><div class="tag">papers/</div><h3 data-ko="원본 PDF" data-en="Original PDFs">원본 PDF</h3><p data-ko="정확한 인용·재확인용. 저작권상 로컬/비공개로 보관." data-en="For exact citation and re-checking. Kept local/private for copyright.">정확한 인용·재확인용. 저작권상 로컬/비공개로 보관.</p></div>
-    <div class="card" style="--c:var(--physical)"><div class="tag">sources/</div><h3 data-ko="LLM 요약" data-en="LLM summaries">LLM 요약</h3><p data-ko="논문 1편 = 요약 노트 1개. 빠르게 훑어볼 때." data-en="One paper = one summary note. For quick scanning.">논문 1편 = 요약 노트 1개. 빠르게 훑어볼 때.</p></div>
-    <div class="card" style="--c:var(--erc)"><div class="tag">wiki/</div><h3 data-ko="구조화 노트" data-en="Structured notes">구조화 노트</h3><p data-ko="frontmatter + 백링크로 연결. 종합·연결에 쓰는 핵심 표면." data-en="Linked via frontmatter + backlinks. The core surface for synthesis.">frontmatter + 백링크로 연결. 종합·연결에 쓰는 핵심 표면.</p></div>
-  </div>
-  <div class="callout" data-ko="<b>wiki/ 안에 추가로</b> — <code>concepts/</code>(분야 횡단 개념) · <code>methods/</code>(방법론) · <code>overviews/</code>(카테고리 종합 허브). 카테고리는 <b>주제(topic) 기준</b>으로, 내용 보고 부여하고 쌓이면 세분화합니다." data-en="<b>Inside wiki/</b> — <code>concepts/</code> (cross-field concepts), <code>methods/</code> (methodology), <code>overviews/</code> (category hubs). Categories are <b>topic-based</b>, assigned by content and split as they grow."><b>wiki/ 안에 추가로</b> — <code>concepts/</code>(분야 횡단 개념) · <code>methods/</code>(방법론) · <code>overviews/</code>(카테고리 종합 허브). 카테고리는 <b>주제(topic) 기준</b>으로, 내용 보고 부여하고 쌓이면 세분화합니다.</div>
+  <div class="sec-eyebrow" data-ko='<span class="num">01</span> · 왜 하나요' data-en='<span class="num">01</span> · Why'><span class="num">01</span> · 왜 하나요</div>
+  <h2 data-ko="읽은 논문을 <em>지식으로</em>" data-en="Turn papers <em>into knowledge</em>">읽은 논문을 <em>지식으로</em></h2>
+  <p class="sec-sub" data-ko='논문을 아무리 많이 읽어도 PDF는 폴더에 쌓이기만 하고 시간이 지나면 잊힙니다. 그래서 읽은 논문을 AI가 요약·정리해 <span class="hl">검색하고 다시 꺼내 쓸 수 있는 지식</span>으로 만들어 둡니다.' data-en='No matter how many papers you read, PDFs just pile up and fade over time. So the AI summarizes and organizes what you read into <span class="hl">knowledge you can search and reuse</span>.'>논문을 아무리 많이 읽어도 PDF는 폴더에 쌓이기만 하고 시간이 지나면 잊힙니다. 그래서 읽은 논문을 AI가 요약·정리해 <span class="hl">검색하고 다시 꺼내 쓸 수 있는 지식</span>으로 만들어 둡니다.</p>
+  <p class="sec-sub" data-ko='<b>효과</b> — 같은 논문을 두 번 읽지 않고, 질문하면 <span class="hl">웹이 아니라 내가 읽은 논문을 근거로</span> 답합니다. 노트가 쌓일수록 분야 전체를 더 빠르게 파악할 수 있습니다.' data-en='<b>Effect</b> — you avoid re-reading the same paper, and answers come from <span class="hl">the papers you read, not the web</span>. The more notes accumulate, the faster you grasp the whole field.'><b>효과</b> — 같은 논문을 두 번 읽지 않고, 질문하면 <span class="hl">웹이 아니라 내가 읽은 논문을 근거로</span> 답합니다. 노트가 쌓일수록 분야 전체를 더 빠르게 파악할 수 있습니다.</p>
 </div></section>
 
 <section><div class="wrap">
-  <div class="sec-eyebrow" data-ko='<span class="num">02</span> · 지식 체인' data-en='<span class="num">02</span> · Knowledge Chain'><span class="num">02</span> · 지식 체인</div>
-  <h2 data-ko="아래가 없으면 <em>위도 없다</em>" data-en="Without the layer below, <em>nothing above</em>">아래가 없으면 <em>위도 없다</em></h2>
-  <p class="sec-sub" data-ko="위키는 저장고가 아니라 운영체제입니다. 각 단계는 아래 단계 위에 쌓이고, 체인을 끊으면 위가 무너집니다." data-en="The wiki is an operating system, not a vault. Each layer builds on the one below — break the chain and everything above collapses.">위키는 저장고가 아니라 운영체제입니다. 각 단계는 아래 단계 위에 쌓이고, 체인을 끊으면 위가 무너집니다.</p>
+  <div class="sec-eyebrow" data-ko='<span class="num">02</span> · 어떻게 저장되나' data-en='<span class="num">02</span> · How it is stored'><span class="num">02</span> · 어떻게 저장되나</div>
+  <h2 data-ko="논문 한 편을 <em>세 가지로</em>" data-en="One paper, <em>three forms</em>">논문 한 편을 <em>세 가지로</em></h2>
+  <p class="sec-sub" data-ko="같은 논문을 원본 PDF · 요약 · 구조화 노트, 세 가지 형태로 보관합니다. 상황에 맞게 골라 찾고, 세 파일은 같은 이름 규칙으로 묶입니다." data-en="Each paper is kept in three forms — original PDF, summary, and structured note — so you can pick the right one. The three files share one naming rule.">같은 논문을 원본 PDF · 요약 · 구조화 노트, 세 가지 형태로 보관합니다. 상황에 맞게 골라 찾고, 세 파일은 같은 이름 규칙으로 묶입니다.</p>
+  <div class="grid3">
+    <div class="card" style="--c:var(--transport)"><div class="tag">papers/</div><h3 data-ko="원본 PDF" data-en="Original PDF">원본 PDF</h3><p data-ko="정확히 인용하거나 다시 확인할 때. 저작권상 로컬에 보관." data-en="For exact citation or re-checking. Kept local for copyright.">정확히 인용하거나 다시 확인할 때. 저작권상 로컬에 보관.</p></div>
+    <div class="card" style="--c:var(--physical)"><div class="tag">sources/</div><h3 data-ko="요약" data-en="Summary">요약</h3><p data-ko="논문 1편 = 요약 1개. 빠르게 훑어보고 싶을 때." data-en="One paper = one summary. For a quick scan.">논문 1편 = 요약 1개. 빠르게 훑어보고 싶을 때.</p></div>
+    <div class="card" style="--c:var(--erc)"><div class="tag">wiki/</div><h3 data-ko="구조화 노트" data-en="Structured note">구조화 노트</h3><p data-ko="키워드·개념을 서로 연결한 노트. 검색과 종합의 중심." data-en="Notes linking keywords and concepts. The hub for search and synthesis.">키워드·개념을 서로 연결한 노트. 검색과 종합의 중심.</p></div>
+  </div>
+  <div class="callout" data-ko="노트는 <b>주제별로 분류</b>하고, 자주 나오는 개념·방법은 따로 모읍니다. 한 분야가 쌓이면 <b>종합 노트</b>로 큰 그림을 정리합니다." data-en="Notes are <b>grouped by topic</b>, and recurring concepts/methods are collected separately. Once a field grows, a <b>synthesis note</b> captures the big picture.">노트는 <b>주제별로 분류</b>하고, 자주 나오는 개념·방법은 따로 모읍니다. 한 분야가 쌓이면 <b>종합 노트</b>로 큰 그림을 정리합니다.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-eyebrow" data-ko='<span class="num">03</span> · 쌓여서 연구로' data-en='<span class="num">03</span> · From notes to research'><span class="num">03</span> · 쌓여서 연구로</div>
+  <h2 data-ko="한 단계씩 <em>내 연구로</em>" data-en="Step by step, <em>into your research</em>">한 단계씩 <em>내 연구로</em></h2>
+  <p class="sec-sub" data-ko="읽은 논문이 차곡차곡 쌓여 결국 내 연구로 이어집니다. 앞 단계가 탄탄할수록 다음 단계가 잘 나옵니다." data-en="What you read accumulates and eventually leads to your own research. The stronger each step, the better the next one comes out.">읽은 논문이 차곡차곡 쌓여 결국 내 연구로 이어집니다. 앞 단계가 탄탄할수록 다음 단계가 잘 나옵니다.</p>
   <div class="flow">
     <span class="fbox">PDF</span><span class="farr">→</span>
-    <span class="fbox" data-ko="요약 (sources)" data-en="summary (sources)">요약 (sources)</span><span class="farr">→</span>
-    <span class="fbox" data-ko="구조화 위키" data-en="structured wiki">구조화 위키</span><span class="farr">→</span>
-    <span class="fbox" data-ko="종합 (overviews)" data-en="synthesis (overviews)">종합 (overviews)</span><span class="farr">→</span>
-    <span class="fbox" data-ko="분석 스펙" data-en="analysis spec">분석 스펙</span><span class="farr">→</span>
+    <span class="fbox" data-ko="요약" data-en="summary">요약</span><span class="farr">→</span>
+    <span class="fbox" data-ko="구조화 노트" data-en="structured note">구조화 노트</span><span class="farr">→</span>
+    <span class="fbox" data-ko="분야 종합" data-en="field synthesis">분야 종합</span><span class="farr">→</span>
+    <span class="fbox" data-ko="분석 계획" data-en="analysis plan">분석 계획</span><span class="farr">→</span>
     <span class="fbox k" data-ko="연구 결과" data-en="research output">연구 결과</span>
   </div>
 </div></section>
 
 <section><div class="wrap">
-  <div class="sec-eyebrow" data-ko='<span class="num">03</span> · 논문 넣기' data-en='<span class="num">03</span> · Ingest'><span class="num">03</span> · 논문 넣기</div>
-  <h2 data-ko="<em>한 마디</em>로 위키에 정리" data-en="File it in <em>one line</em>"><em>한 마디</em>로 위키에 정리</h2>
-  <p class="sec-sub" data-ko="PDF(또는 DOI)를 주고 “이 논문 위키에 정리해줘” 한 마디면, AI가 stem 규칙으로 이름 정리 → 요약 → 구조화 노트 → 백링크·overview 연결까지 자동으로 합니다." data-en="Give a PDF (or DOI) and say “ingest this paper” — the AI names it by the stem rule, summarizes, creates a structured note, and links backlinks/overviews automatically.">PDF(또는 DOI)를 주고 "이 논문 위키에 정리해줘" 한 마디면, AI가 stem 규칙으로 이름 정리 → 요약 → 구조화 노트 → 백링크·overview 연결까지 자동으로 합니다.</p>
-  <div class="flow"><span class="fbox">PDF / DOI</span><span class="farr">→</span><span class="fbox k" data-ko='"이 PDF 위키에 정리해줘"' data-en='"ingest this PDF"'>"이 PDF 위키에 정리해줘"</span><span class="farr">→</span><span class="fbox" data-ko="papers · sources · wiki 자동 생성" data-en="auto-create papers · sources · wiki">papers · sources · wiki 자동 생성</span><span class="farr">→</span><span class="fbox" data-ko="백링크 · overview 연결" data-en="link backlinks · overview">백링크 · overview 연결</span></div>
-  <div class="callout" data-ko="생성 순서 엄수: <b>PDF → sources → wiki</b>. stem(<code>저자연도-키워드</code>)은 세 폴더에서 동일하게 — 추적·중복방지." data-en="Strict order: <b>PDF → sources → wiki</b>. The stem (<code>author-year-keyword</code>) is identical across all three folders for tracking and de-duplication.">생성 순서 엄수: <b>PDF → sources → wiki</b>. stem(<code>저자연도-키워드</code>)은 세 폴더에서 동일하게 — 추적·중복방지.</div>
-</div></section>
+  <div class="sec-eyebrow" data-ko='<span class="num">04</span> · 넣는 법과 규칙' data-en='<span class="num">04</span> · How to add &amp; the rules'><span class="num">04</span> · 넣는 법과 규칙</div>
+  <h2 data-ko="<em>한 마디</em>로 위키에 정리" data-en="Add it in <em>one line</em>"><em>한 마디</em>로 위키에 정리</h2>
+  <p class="sec-sub" data-ko="PDF(또는 DOI)를 주고 “이 논문 위키에 정리해줘” 한 마디면, AI가 이름 정리 → 요약 → 구조화 노트 → 연결까지 자동으로 합니다." data-en="Give a PDF (or DOI) and say “add this paper to the wiki” — the AI handles naming, summary, structured note, and links automatically.">PDF(또는 DOI)를 주고 "이 논문 위키에 정리해줘" 한 마디면, AI가 이름 정리 → 요약 → 구조화 노트 → 연결까지 자동으로 합니다.</p>
+  <div class="flow"><span class="fbox">PDF / DOI</span><span class="farr">→</span><span class="fbox k" data-ko='"이 논문 위키에 정리해줘"' data-en='"add this paper to the wiki"'>"이 논문 위키에 정리해줘"</span><span class="farr">→</span><span class="fbox" data-ko="요약·노트 자동 생성" data-en="auto summary + note">요약·노트 자동 생성</span><span class="farr">→</span><span class="fbox" data-ko="개념·종합 노트에 연결" data-en="link to concept/synthesis notes">개념·종합 노트에 연결</span></div>
 
-<section><div class="wrap">
-  <div class="sec-eyebrow" data-ko='<span class="num">04</span> · 4대 규칙' data-en='<span class="num">04</span> · 4 Rules'><span class="num">04</span> · 4대 규칙</div>
-  <h2 data-ko="위키의 가치를 만드는 <em>4대 규칙</em>" data-en="The <em>4 rules</em> that make the wiki valuable">위키의 가치를 만드는 <em>4대 규칙</em></h2>
+  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>믿을 수 있는 위키를 만드는 4가지 규칙</strong>" data-en="<strong>4 rules that keep the wiki trustworthy</strong>"><strong>믿을 수 있는 위키를 만드는 4가지 규칙</strong></p>
   <ul class="fields">
-    <li data-ko="<b>1. 웹검색 금지</b> — 기본은 위키만. 검색은 명시 요청 시에만. 잡지식으로 빈칸 채우기 금지." data-en="<b>1. No web search</b> — wiki only by default. Search only when explicitly asked. No filling gaps with guesses."><b>1. 웹검색 금지</b> — 기본은 위키만. 검색은 명시 요청 시에만.</li>
-    <li data-ko="<b>2. 위키 우선</b> — 답변은 먼저 sources/wiki를 근거로." data-en="<b>2. Wiki first</b> — answer from sources/wiki first."><b>2. 위키 우선</b> — 답변은 먼저 sources/wiki를 근거로.</li>
-    <li data-ko="<b>3. 모르면 PDF 재독</b> — 위키가 흐릿하면 원문 PDF를 다시 읽는다." data-en="<b>3. Re-read the PDF</b> — if the wiki is unclear, read the original PDF again."><b>3. 모르면 PDF 재독</b> — 위키가 흐릿하면 원문 PDF를 다시 읽는다.</li>
-    <li data-ko="<b>4. 없으면 요청</b> — 근거가 위키에 없으면 추측 말고 “PDF 주세요”." data-en="<b>4. Ask if missing</b> — if it's not in the wiki, don't guess; ask for the PDF."><b>4. 없으면 요청</b> — 근거가 위키에 없으면 추측 말고 "PDF 주세요".</li>
+    <li data-ko="<b>1.</b> 기본은 내 위키만 본다 (웹 검색은 따로 요청할 때만)" data-en="<b>1.</b> Use only your wiki by default (web search only on request)"><b>1.</b> 기본은 내 위키만 본다 (웹 검색은 따로 요청할 때만)</li>
+    <li data-ko="<b>2.</b> 답은 먼저 내가 정리한 요약·노트를 근거로" data-en="<b>2.</b> Answer from your own summaries and notes first"><b>2.</b> 답은 먼저 내가 정리한 요약·노트를 근거로</li>
+    <li data-ko="<b>3.</b> 부족하면 원본 PDF를 다시 읽는다" data-en="<b>3.</b> If unclear, read the original PDF again"><b>3.</b> 부족하면 원본 PDF를 다시 읽는다</li>
+    <li data-ko="<b>4.</b> 위키에 없으면 추측 말고 “PDF를 추가해 주세요”" data-en="<b>4.</b> If it is not in the wiki, ask for the PDF instead of guessing"><b>4.</b> 위키에 없으면 추측 말고 "PDF를 추가해 주세요"</li>
   </ul>
-  <div class="callout" data-ko="모르는 값은 prose로 얼버무리지 말고 <code>unknown</code>으로 표시. 이 규칙들이 “그럴듯한 환각”을 막아 위키를 신뢰할 수 있게 만듭니다." data-en="Mark unknowns as <code>unknown</code> rather than glossing over them in prose. These rules prevent plausible hallucinations and keep the wiki trustworthy.">모르는 값은 prose로 얼버무리지 말고 <code>unknown</code>으로 표시. 이 규칙들이 "그럴듯한 환각"을 막아 위키를 신뢰할 수 있게 만듭니다.</div>
+  <div class="callout" data-ko="모르는 값은 지어내지 않고 <b>‘모름’</b>으로 표시합니다. 이 규칙들이 그럴듯한 거짓(환각)을 막아 위키를 믿을 수 있게 합니다." data-en="Unknown values are marked as <b>“unknown,”</b> never invented. These rules block plausible-but-false answers and keep the wiki trustworthy.">모르는 값은 지어내지 않고 <b>'모름'</b>으로 표시합니다. 이 규칙들이 그럴듯한 거짓(환각)을 막아 위키를 믿을 수 있게 합니다.</div>
 </div></section>
 
 <section><div class="wrap">
   <div class="sec-eyebrow" data-ko='<span class="num">05</span> · 운영 방침' data-en='<span class="num">05</span> · Rollout'><span class="num">05</span> · 운영 방침</div>
   <h2 data-ko="각자 먼저, <em>나중에 그룹</em>" data-en="Individual first, <em>group later</em>">각자 먼저, <em>나중에 그룹</em></h2>
-  <div class="steps">
-    <div class="step"><div class="stepn">1</div><h3 data-ko="셋업 + 첫 논문" data-en="Setup + first papers">셋업 + 첫 논문</h3><p data-ko="스타터 clone, 핵심 논문 3~5편 위키에 정리. 흐름·stem·백링크 감 잡기." data-en="Clone the starter, ingest 3–5 core papers. Get the feel for the flow, stems, backlinks.">스타터 clone, 핵심 논문 3~5편 위키에 정리.</p></div>
-    <div class="step"><div class="stepn">2</div><h3 data-ko="카테고리 형성" data-en="Form categories">카테고리 형성</h3><p data-ko="주력 분야 10~20편으로 카테고리·concepts·methods 노트 시작." data-en="Build categories, concepts, methods notes with 10–20 papers in your area.">주력 분야 10~20편으로 카테고리·개념·방법 노트.</p></div>
-    <div class="step"><div class="stepn">3</div><h3 data-ko="종합 + Q&amp;A" data-en="Synthesis + Q&amp;A">종합 + Q&amp;A</h3><p data-ko="overview로 분야 종합 1~2개. “내 위키만으로 묻고 답하기” 시작." data-en="Write 1–2 field overviews. Start asking and answering from your wiki only.">overview 1~2개. "내 위키만으로 묻고 답하기" 시작.</p></div>
-  </div>
-  <div class="callout" style="border-left-color:var(--erc)" data-ko="<b>1단계 (최소 1개월): 각자 구축.</b> 모두가 자기 위키를 직접 쌓으며 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다." data-en="<b>Phase 1 (≥ 1 month): build individually.</b> Everyone grows their own wiki hands-on. <b>Phase 2: merge by group.</b> Once comfortable, groups combine wikis into a shared knowledge map."><b>1단계 (최소 1개월): 각자 구축.</b> 모두가 자기 위키를 직접 쌓으며 체득합니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다.</div>
-  <p class="sec-sub" style="margin-top:1.6rem" data-ko="모든 운영 룰의 단일 소스는 스타터 안의 <code>AGENTS.md</code>입니다. AI 에이전트(Claude·Codex)가 매 세션 가장 먼저 읽습니다." data-en="The single source for all rules is <code>AGENTS.md</code> inside the starter — read first by the AI agents (Claude/Codex) every session.">모든 운영 룰의 단일 소스는 스타터 안의 <code>AGENTS.md</code>입니다. AI 에이전트(Claude·Codex)가 매 세션 가장 먼저 읽습니다.</p>
+  <div class="callout" style="border-left-color:var(--erc)" data-ko="<b>1단계 (최소 1개월): 각자 구축.</b> 모두가 자기 위키를 직접 쌓으며 흐름을 익힙니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다." data-en="<b>Phase 1 (≥ 1 month): build individually.</b> Everyone grows their own wiki and learns the flow. <b>Phase 2: merge by group.</b> Once comfortable, groups combine wikis into a shared knowledge map."><b>1단계 (최소 1개월): 각자 구축.</b> 모두가 자기 위키를 직접 쌓으며 흐름을 익힙니다. <b>2단계: 그룹 통합.</b> 충분히 익숙해지면 그룹 단위로 위키를 합쳐 공동 지식 지도로 키웁니다.</div>
+  <p class="sec-sub" style="margin-top:1.4rem" data-ko="모든 작성 규칙은 스타터 안의 <code>AGENTS.md</code> 한 파일에 정리돼 있고, AI(Claude·Codex)가 작업 전 가장 먼저 읽습니다." data-en="All the rules live in one file, <code>AGENTS.md</code>, inside the starter — read first by the AI (Claude/Codex) before any work.">모든 작성 규칙은 스타터 안의 <code>AGENTS.md</code> 한 파일에 정리돼 있고, AI(Claude·Codex)가 작업 전 가장 먼저 읽습니다.</p>
 </div></section>
 
 <footer><div class="wrap">

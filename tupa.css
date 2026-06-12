@@ -38,6 +38,10 @@ nav .sp{flex:1}
 .hero{padding:4rem 0 3rem}
 .brand-logo{width:clamp(170px,30vw,290px);height:auto;display:block;margin-bottom:1.5rem}
 [data-theme="dark"] .brand-logo{filter:brightness(0) invert(0.95)}
+.navbrand{display:flex;align-items:center}
+.nav-logo{height:26px;width:auto;display:block}
+[data-theme="dark"] .nav-logo{filter:brightness(0) invert(0.95)}
+.hl{background:color-mix(in oklch,var(--navy-soft) 18%,transparent);border-radius:5px;padding:.04rem .32rem;font-weight:600;color:var(--navy-deep)}
 .eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--navy-soft)}
 h1{font-weight:700;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.08;letter-spacing:-.03em;color:var(--navy-deep)}
