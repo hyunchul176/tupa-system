@@ -42,6 +42,25 @@ nav .sp{flex:1}
 .nav-logo{height:26px;width:auto;display:block}
 [data-theme="dark"] .nav-logo{filter:brightness(0) invert(0.95)}
 .hl{background:color-mix(in oklch,var(--navy-soft) 18%,transparent);border-radius:5px;padding:.04rem .32rem;font-weight:600;color:var(--navy-deep)}
+/* 대시보드 파트 미리보기(mockup) */
+.mk{margin-top:.9rem;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.45rem}
+.mk-cap{font-family:var(--f-mono);font-size:.58rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.05em}
+.mk-row{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink-soft)}
+.mk-dot{width:16px;height:16px;border-radius:50%;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:800;border:1.6px solid var(--ink-muted);color:transparent}
+.mk-dot.done{background:oklch(0.58 0.13 150);border-color:oklch(0.58 0.13 150);color:#fff}
+.mk-row.lead .mk-nm{background:color-mix(in oklch,var(--physical) 24%,transparent);border-radius:5px;padding:.02rem .4rem;font-weight:700;color:var(--navy-deep)}
+.mkb-title{font-weight:700;color:var(--navy-deep);font-size:.82rem}
+.mkb-item{font-size:.78rem;color:var(--ink-soft);line-height:1.4}
+.mkb-item b{color:var(--navy-deep)}
+.mkb-g{font-family:var(--f-mono);font-size:.6rem;color:var(--ink-muted)}
+.mk-rs{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--ink-soft)}
+.mk-rs .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mk-bar{flex:none;width:54px;height:5px;background:var(--line);border-radius:99px;overflow:hidden}
+.mk-bar i{display:block;height:100%;background:var(--physical);border-radius:99px}
+.mk-pct{flex:none;font-family:var(--f-mono);font-size:.64rem;color:var(--navy-soft)}
+.mkc{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+.mkc-d{font-family:var(--f-mono);font-size:.6rem;color:var(--ink-muted);text-align:center;border:1px solid var(--line);border-radius:5px;padding:.35rem 0;background:var(--surface)}
+.mkc-ev{grid-row:2;font-size:.6rem;background:var(--surface);border-left:3px solid var(--erc);border-radius:4px;padding:.18rem .35rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink-soft)}
 .eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--navy-soft)}
 h1{font-weight:700;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.08;letter-spacing:-.03em;color:var(--navy-deep)}
