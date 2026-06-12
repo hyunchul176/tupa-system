@@ -40,24 +40,18 @@
   </div>
 
   <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>리포트 항목</strong>" data-en="<strong>Report fields</strong>"><strong>리포트 항목</strong></p>
-  <ul class="fields">
-    <li data-ko="<b>1.</b> 이번 주 한 일" data-en="<b>1.</b> What I did this week"><b>1.</b> 이번 주 한 일</li>
-    <li data-ko="<b>2.</b> 진행 중" data-en="<b>2.</b> In progress"><b>2.</b> 진행 중</li>
-    <li data-ko="<b>3.</b> 막힌 것 / 도움 필요" data-en="<b>3.</b> Blocked / need help"><b>3.</b> 막힌 것 / 도움 필요</li>
-    <li data-ko="<b>4.</b> 다음 주 계획" data-en="<b>4.</b> Next week's plan"><b>4.</b> 다음 주 계획</li>
-    <li data-ko="<b>5.</b> 관련 논문 · 위키 노트" data-en="<b>5.</b> Related papers · wiki notes"><b>5.</b> 관련 논문 · 위키 노트</li>
-    <li data-ko="<b>6.</b> 검토 필요사항" data-en="<b>6.</b> Items needing review"><b>6.</b> 검토 필요사항</li>
+  <ul class="fields" style="grid-template-columns:1fr">
+    <li data-ko="<b>1. 이번 주 한 일</b> — 이번 주에 실제로 진행한 것 (실험·분석·코드·읽은 논문 등 구체적으로)" data-en="<b>1. What I did this week</b> — what you actually worked on (experiments, analysis, code, papers read)"><b>1. 이번 주 한 일</b> — 이번 주에 실제로 진행한 것 (실험·분석·코드·읽은 논문 등 구체적으로)</li>
+    <li data-ko="<b>2. 진행 중</b> — 아직 끝나지 않고 계속하고 있는 작업" data-en="<b>2. In progress</b> — work that is still ongoing"><b>2. 진행 중</b> — 아직 끝나지 않고 계속하고 있는 작업</li>
+    <li data-ko="<b>3. 막힌 것 / 도움 필요</b> — 막혀 있거나 조언·리소스가 필요한 부분 (있으면 ‘막힌것’ 체크박스도 켜기)" data-en="<b>3. Blocked / need help</b> — where you are stuck or need advice/resources (also tick the ‘blocked’ checkbox)"><b>3. 막힌 것 / 도움 필요</b> — 막혀 있거나 조언·리소스가 필요한 부분 (있으면 ‘막힌것’ 체크박스도 켜기)</li>
+    <li data-ko="<b>4. 다음 주 계획</b> — 다음 주에 할 일" data-en="<b>4. Next week's plan</b> — what you will do next week"><b>4. 다음 주 계획</b> — 다음 주에 할 일</li>
+    <li data-ko="<b>5. 관련 논문 · 위키 노트</b> — 이번 주와 관련된 논문이나 내 위키 노트 링크" data-en="<b>5. Related papers · wiki notes</b> — papers or your wiki notes related to this week"><b>5. 관련 논문 · 위키 노트</b> — 이번 주와 관련된 논문이나 내 위키 노트 링크</li>
+    <li data-ko="<b>6. 검토 필요사항</b> — 교수님·그룹장이 봐줬으면 하는 것 (결정 필요·리뷰 요청 등)" data-en="<b>6. Items needing review</b> — anything you want the professor or lead to look at (decisions, review requests)"><b>6. 검토 필요사항</b> — 교수님·그룹장이 봐줬으면 하는 것 (결정 필요·리뷰 요청 등)</li>
   </ul>
 
   <div class="callout" data-ko="<b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다." data-en="<b>Deadline: every Friday 5 PM.</b> Each group lead checks members' submission status regularly."><b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다.</div>
 
-  <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:0" data-ko="<strong>제출하면 어디로 가나</strong>" data-en="<strong>Where it goes after you submit</strong>"><strong>제출하면 어디로 가나</strong></p>
-  <div class="flow">
-    <span class="fbox" data-ko="내 리포트" data-en="My report">내 리포트</span><span class="farr">→</span>
-    <span class="fbox k" data-ko="AI가 그룹별 종합" data-en="AI summarizes by group">AI가 그룹별 종합</span><span class="farr">→</span>
-    <span class="fbox" data-ko="교수님 확인 · 피드백" data-en="Professor reviews · feedback">교수님 확인 · 피드백</span><span class="farr">→</span>
-    <span class="fbox" data-ko="내 리포트에 댓글" data-en="Comment on my report">내 리포트에 댓글</span>
-  </div>
+  <div class="callout" style="border-left-color:var(--infra)" data-ko="<b>검토</b> — 제출한 리포트는 <b>그룹장과 교수님이 검토</b>합니다. 매번 답을 다는 것은 아니고, 필요한 경우에만 노션에 코멘트를 남깁니다." data-en="<b>Review</b> — submitted reports are <b>reviewed by the group lead and the professor</b>. They don't reply every time; they leave a comment in Notion only when needed."><b>검토</b> — 제출한 리포트는 <b>그룹장과 교수님이 검토</b>합니다. 매번 답을 다는 것은 아니고, 필요한 경우에만 노션에 코멘트를 남깁니다.</div>
 
   <p class="sec-sub" style="margin-top:1.9rem;margin-bottom:.4rem" data-ko="<strong>한눈에 보는 라이브 대시보드</strong>" data-en="<strong>Live dashboard at a glance</strong>"><strong>한눈에 보는 라이브 대시보드</strong></p>
   <p class="sec-sub" style="margin-top:0" data-ko="그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다." data-en="Group status · project schedules · individual research · submission status · calendar — all in real time. Notion edits appear within <b>~1 minute</b>.">그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다.</p>
