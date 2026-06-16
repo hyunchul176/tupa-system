@@ -23,13 +23,15 @@
 .rmsub{font-size:.85rem;color:var(--ink-muted);margin-bottom:1.1rem}
 .roadmap{display:flex;overflow-x:auto;padding:.2rem 0 .6rem}
 .rm-item{flex:1 0 auto;min-width:118px;text-align:center;position:relative}
-.rm-date{display:inline-block;font-size:.92rem;font-weight:800;color:var(--warn);background:color-mix(in oklch,var(--warn) 14%,var(--surface));border:1px solid color-mix(in oklch,var(--warn) 32%,var(--line));padding:.2rem .6rem;border-radius:99px;margin-bottom:.6rem}
-.rm-line{position:relative;height:16px}
+.rm-card{display:inline-block;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--warn);border-radius:10px;padding:.5rem .8rem;box-shadow:0 2px 8px var(--shadow);margin-bottom:.6rem}
+.rm-date{font-size:.9rem;font-weight:800;color:var(--warn);white-space:nowrap}
+.rm-est{font-size:.74rem;font-weight:600;color:var(--ink-muted)}
+.rm-name{font-size:.98rem;font-weight:800;color:var(--navy-deep);margin-top:.2rem}
+.rm-line{position:relative;height:14px}
 .rm-line::before{content:"";position:absolute;top:50%;left:0;right:0;height:3px;background:color-mix(in oklch,var(--warn) 32%,var(--line));transform:translateY(-50%)}
 .rm-item:first-child .rm-line::before{left:50%}
 .rm-item:last-child .rm-line::before{right:50%}
-.rm-dot{position:absolute;top:50%;left:50%;width:15px;height:15px;border-radius:50%;background:var(--warn);transform:translate(-50%,-50%);box-shadow:0 0 0 4px var(--bg)}
-.rm-name{display:inline-block;margin-top:.6rem;font-size:.92rem;font-weight:800;color:var(--navy-deep);background:var(--surface);border:1px solid var(--line);padding:.32rem .7rem;border-radius:9px;box-shadow:0 1px 2px var(--shadow)}
+.rm-dot{position:absolute;top:50%;left:50%;width:14px;height:14px;border-radius:50%;background:var(--warn);transform:translate(-50%,-50%);box-shadow:0 0 0 4px var(--bg)}
 .fieldsec{margin-top:2.2rem}
 .fieldsec h2{display:flex;align-items:center;gap:.5rem;font-size:1.15rem;font-weight:800;color:var(--navy-deep);margin-bottom:.9rem}
 .confgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem}
@@ -71,14 +73,13 @@
 
   <div class="rmwrap">
     <div class="rmtitle" data-ko="🔥 다가오는 제출기한" data-en="🔥 Upcoming deadlines">🔥 다가오는 제출기한</div>
-    <div class="rmsub" data-ko="2026년 하반기 · 임박한 순 (~ 는 예상)" data-en="H2 2026 · soonest first (~ = estimate)">2026년 하반기 · 임박한 순 (~ 는 예상)</div>
     <div class="roadmap">
-      <div class="rm-item"><div class="rm-date">7.24</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">INFOCOM</div></div>
-      <div class="rm-item"><div class="rm-date">7.27</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">AAAI</div></div>
-      <div class="rm-item"><div class="rm-date">9.10</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">CHI</div></div>
-      <div class="rm-item"><div class="rm-date">~9</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">ICLR</div></div>
-      <div class="rm-item"><div class="rm-date">~9</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">HRI</div></div>
-      <div class="rm-item"><div class="rm-date">11.15</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">CVPR</div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.7.24</div><div class="rm-name">INFOCOM</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.7.27</div><div class="rm-name">AAAI</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.9.10</div><div class="rm-name">CHI</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div><div class="rm-name">ICLR</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div><div class="rm-name">HRI</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-card"><div class="rm-date">2026.11.15</div><div class="rm-name">CVPR</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
     </div>
   </div>
 
