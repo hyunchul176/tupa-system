@@ -175,6 +175,7 @@ footer a{color:var(--navy-soft);text-decoration:none}
 .hub-group{border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem 1.3rem;background:var(--surface-2)}
 .hg-label{font-size:1rem;font-weight:700;color:var(--navy-deep);margin-bottom:.9rem;letter-spacing:-.01em}
 .hub-pair{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.hub-trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
 .hubcard.wide{margin-top:1rem}
 .hub-mini{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.6rem;padding:.85rem 1.2rem;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--ink-soft);font-size:.88rem}
 .hub-mini:hover{background:var(--surface-2)}

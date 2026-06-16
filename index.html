@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TUPA Lab</title>
-<meta name="description" content="TUPA Lab 구성원 허브 — 대시보드 · 주간 리포트 · LLM-Wiki · 연구실 홈페이지.">
+<meta name="description" content="TUPA Lab 구성원 허브: 대시보드 · 주간 리포트 · 연구원 연구주제 · 목표 학회 · LLM-Wiki.">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,9 +30,10 @@
 <section id="hub"><div class="wrap">
   <div class="sec-eyebrow" data-ko="바로가기" data-en="Quick Links">바로가기</div>
   <h2 data-ko="어디로 갈까요?" data-en="Where to?">어디로 갈까요?</h2>
-  <p class="sec-sub" data-ko="연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요." data-en="A starting point for lab members — go straight to what you need.">연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요.</p>
+  <p class="sec-sub" data-ko="연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요." data-en="A starting point for lab members. Go straight to what you need.">연구실 구성원을 위한 시작점입니다. 필요한 곳으로 바로 이동하세요.</p>
+
   <div class="hub-group">
-    <div class="hg-label" data-ko="📋 주간 운영 — 작성하고 한눈에 보기" data-en="📋 Weekly Ops — write and see at a glance">📋 주간 운영 — 작성하고 한눈에 보기</div>
+    <div class="hg-label" data-ko="📋 주간 운영 (작성하고 한눈에 보기)" data-en="📋 Weekly Ops (write and monitor)">📋 주간 운영 (작성하고 한눈에 보기)</div>
     <div class="hub-pair">
       <div class="hubcard" style="--c:var(--transport)">
         <div class="hc-ic">📝</div>
@@ -46,7 +47,7 @@
       <div class="hubcard" style="--c:var(--physical)">
         <div class="hc-ic">📊</div>
         <h3 data-ko="라이브 대시보드" data-en="Live Dashboard">라이브 대시보드</h3>
-        <p data-ko="모두의 리포트·연구·일정을 실시간으로 한눈에." data-en="Everyone's reports, research, and schedules — live, at a glance.">모두의 리포트·연구·일정을 실시간으로 한눈에.</p>
+        <p data-ko="모두의 리포트·연구·일정을 실시간으로 한눈에." data-en="Everyone's reports, research, and schedules, live at a glance.">모두의 리포트·연구·일정을 실시간으로 한눈에.</p>
         <div class="hc-btns">
           <a class="hc-btn" href="monitor.html" data-ko="자세히 보기" data-en="Learn more">자세히 보기</a>
           <a class="hc-btn primary" href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 열기 ↗" data-en="Open dashboard ↗">대시보드 열기 ↗</a>
@@ -55,26 +56,33 @@
     </div>
   </div>
 
-  <a class="hubcard wide" style="--c:var(--erc)" href="wiki.html">
-    <div class="hc-ic">📚</div>
-    <h3>LLM-Wiki</h3>
-    <p data-ko="읽은 논문을 요약·정리해 쌓는 개인 지식베이스." data-en="A personal knowledge base from the papers you read.">읽은 논문을 요약·정리해 쌓는 개인 지식베이스.</p>
-    <span class="hc-go" data-ko="자세히 보기 →" data-en="Learn more →">자세히 보기 →</span>
-  </a>
+  <div class="hub-group" style="margin-top:1.2rem">
+    <div class="hg-label" data-ko="🔬 연구 · 자료" data-en="🔬 Research & Resources">🔬 연구 · 자료</div>
+    <div class="hub-trio">
+      <a class="hubcard" style="--c:var(--infra)" href="students.html">
+        <div class="hc-ic">🔬</div>
+        <h3 data-ko="연구원 연구 주제" data-en="Researcher Topics">연구원 연구 주제</h3>
+        <p data-ko="팀별 연구 주제를 키워드로. 이름을 누르면 각자의 연구 소개로." data-en="Research topics by team. Click a name for the full intro.">팀별 연구 주제를 키워드로. 이름을 누르면 각자의 연구 소개로.</p>
+        <span class="hc-go" data-ko="보기 →" data-en="View →">보기 →</span>
+      </a>
+      <a class="hubcard" style="--c:var(--erc)" href="conferences.html">
+        <div class="hc-ic">🎯</div>
+        <h3 data-ko="목표 학회" data-en="Target Venues">목표 학회</h3>
+        <p data-ko="분야별 주요 학회와 등급·제출기한을 한눈에." data-en="Key venues by field with tiers and deadlines.">분야별 주요 학회와 등급·제출기한을 한눈에.</p>
+        <span class="hc-go" data-ko="보기 →" data-en="View →">보기 →</span>
+      </a>
+      <a class="hubcard" style="--c:var(--navy)" href="wiki.html">
+        <div class="hc-ic">📚</div>
+        <h3>LLM-Wiki</h3>
+        <p data-ko="읽은 논문을 요약·정리해 쌓는 개인 지식베이스." data-en="A personal knowledge base from the papers you read.">읽은 논문을 요약·정리해 쌓는 개인 지식베이스.</p>
+        <span class="hc-go" data-ko="자세히 보기 →" data-en="Learn more →">자세히 보기 →</span>
+      </a>
+    </div>
+  </div>
 
   <a class="hub-mini" href="https://inhi.kim/" target="_blank">
     <span>🏠 <b data-ko="연구실 홈페이지" data-en="Lab Homepage">연구실 홈페이지</b><span class="hm-sub" data-ko="TUPA Lab 공식 사이트" data-en="Official TUPA Lab site">TUPA Lab 공식 사이트</span></span>
     <span class="hm-go">inhi.kim ↗</span>
-  </a>
-
-  <div class="hg-label" style="margin-top:1.6rem" data-ko="📎 공용 자료" data-en="📎 Shared Resources">📎 공용 자료</div>
-  <a class="hub-mini" href="conferences.html">
-    <span>🎯 <b data-ko="목표 학회" data-en="Target Venues">목표 학회</b><span class="hm-sub" data-ko="분야별 주요 학회 · 등급 · 마감일" data-en="Conferences by field · tiers · deadlines">분야별 주요 학회 · 등급 · 마감일</span></span>
-    <span class="hm-go" data-ko="보기 →" data-en="View →">보기 →</span>
-  </a>
-  <a class="hub-mini" href="students.html">
-    <span>🔬 <b data-ko="연구원 연구 주제" data-en="Researcher Topics">연구원 연구 주제</b><span class="hm-sub" data-ko="이름 클릭 → 각자의 연구 소개" data-en="Click a name → research intro">이름 클릭 → 각자의 연구 소개</span></span>
-    <span class="hm-go" data-ko="보기 →" data-en="View →">보기 →</span>
   </a>
 </div></section>
 
