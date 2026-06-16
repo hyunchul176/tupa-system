@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>목표 학회 · TUPA Lab</title>
-<meta name="description" content="TUPA Lab 분야별 주요 학회 — 등급·마감일·일정. 우리가 노리는 무대.">
+<title>주요 학회 · TUPA Lab</title>
+<meta name="description" content="TUPA Lab 분야별 주요 학회 — 등급·제출기한·일정.">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,32 +12,30 @@
 <script>(function(){var s=localStorage.getItem('tupa-theme');var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 <link rel="stylesheet" href="tupa.css">
 <style>
-.legend{display:flex;flex-wrap:wrap;gap:.6rem;margin:.4rem 0 1.4rem;font-size:.82rem;color:var(--ink-soft)}
-.legend .tier{margin-right:.3rem}
-.tier{display:inline-block;font-family:var(--f-body);font-weight:800;font-size:.66rem;letter-spacing:.02em;padding:.12rem .42rem;border-radius:6px;vertical-align:middle}
-.tier.astar{background:color-mix(in oklch,#d4a017 26%,var(--surface));color:#7a5c00}
-[data-theme="dark"] .tier.astar{background:color-mix(in oklch,#e6b800 30%,var(--surface));color:#ffe08a}
-.tier.a{background:color-mix(in oklch,var(--navy-soft) 20%,var(--surface));color:var(--navy-deep)}
-.tier.flag{background:color-mix(in oklch,var(--transport) 22%,var(--surface));color:var(--transport)}
-.up-strip{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 .4rem}
-.up-item{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:9px;padding:.5rem .7rem;font-size:.86rem;min-width:150px}
-.up-item b{color:var(--navy-deep)}
-.up-when{display:block;font-family:var(--f-mono);font-size:.72rem;color:var(--warn);font-weight:700;margin-top:.15rem}
-.fieldsec{margin-top:2rem}
-.fieldsec h2{display:flex;align-items:center;gap:.5rem;font-size:1.05rem;font-weight:800;color:var(--navy-deep);margin-bottom:.2rem}
-.fieldsec .fsub{font-size:.84rem;color:var(--ink-muted);margin-bottom:.9rem}
-.confgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.9rem}
-.conf{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;transition:transform .15s,box-shadow .15s,border-color .15s}
+.legend{display:flex;flex-wrap:wrap;gap:.8rem;margin:.4rem 0 1.6rem;font-size:.88rem;color:var(--ink-soft)}
+.tier{display:inline-block;font-weight:800;font-size:.7rem;letter-spacing:.02em;padding:.16rem .48rem;border-radius:6px;vertical-align:middle;margin-right:.35rem}
+.tier.astar{background:color-mix(in oklch,#d4a017 28%,var(--surface));color:#6e5200}
+[data-theme="dark"] .tier.astar{background:color-mix(in oklch,#e6b800 32%,var(--surface));color:#ffe08a}
+.tier.a{background:color-mix(in oklch,var(--navy-soft) 22%,var(--surface));color:var(--navy-deep)}
+.tier.flag{background:color-mix(in oklch,var(--transport) 24%,var(--surface));color:var(--transport)}
+.up-strip{display:flex;flex-wrap:wrap;gap:.6rem;margin:.7rem 0 .4rem}
+.up-item{display:flex;align-items:center;gap:.7rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:10px;padding:.62rem .9rem}
+.up-item b{font-size:.98rem;color:var(--navy-deep);font-weight:700}
+.up-when{font-size:.86rem;color:var(--warn);font-weight:700;white-space:nowrap}
+.fieldsec{margin-top:2.2rem}
+.fieldsec h2{display:flex;align-items:center;gap:.5rem;font-size:1.15rem;font-weight:800;color:var(--navy-deep);margin-bottom:.9rem}
+.confgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem}
+.conf{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:1.05rem 1.15rem;display:flex;flex-direction:column;gap:.55rem;transition:transform .15s,box-shadow .15s,border-color .15s}
 .conf:hover{transform:translateY(-2px);box-shadow:0 10px 26px var(--shadow);border-color:var(--navy-soft)}
 .conf-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
-.conf-abbr{font-weight:800;font-size:1.18rem;letter-spacing:-.01em;color:var(--navy-deep)}
-.conf-name{font-size:.82rem;color:var(--ink-soft);line-height:1.45;min-height:2.3em}
-.conf-dl{font-size:.9rem;color:var(--ink);background:color-mix(in oklch,var(--warn) 9%,var(--surface-2));border-radius:8px;padding:.4rem .6rem}
-.conf-dl b{color:var(--warn);font-weight:700}
-.conf-meta{font-size:.78rem;color:var(--ink-muted);font-family:var(--f-mono);line-height:1.6}
-.conf-link{align-self:flex-start;margin-top:.1rem;font-size:.8rem;font-weight:700;color:var(--navy-soft);text-decoration:none}
+.conf-abbr{font-weight:800;font-size:1.24rem;letter-spacing:-.01em;color:var(--navy-deep)}
+.conf-name{font-size:.9rem;color:var(--ink-soft);line-height:1.5;min-height:2.7em;font-weight:500}
+.conf-dl{font-size:.94rem;color:var(--ink);background:color-mix(in oklch,var(--warn) 10%,var(--surface-2));border-radius:8px;padding:.5rem .7rem;font-weight:500}
+.conf-dl b{color:var(--warn);font-weight:800}
+.conf-meta{font-size:.88rem;color:var(--ink-soft);line-height:1.7}
+.conf-link{align-self:flex-start;font-size:.86rem;font-weight:700;color:var(--navy-soft);text-decoration:none}
 .conf-link:hover{text-decoration:underline}
-.srcnote{margin-top:2.2rem;font-size:.84rem}
+.srcnote{margin-top:2.2rem;font-size:.9rem}
 </style>
 </head>
 <body>
@@ -51,9 +49,9 @@
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div class="eyebrow" data-ko="TUPA LAB · 목표 학회" data-en="TUPA LAB · Target Venues">TUPA LAB · 목표 학회</div>
-  <h1 data-ko="우리가 노리는 <em>무대</em>" data-en="The <em>stages</em> we aim for">우리가 노리는 <em>무대</em></h1>
-  <p class="lede" data-ko='연구는 결국 <span class="hl">최고의 무대에서 검증</span>됩니다. 분야별 <span class="hl">대표 학회와 등급·마감일</span>을 한눈에 모았습니다. 목표를 정하고, <span class="hl">마감에서 거꾸로 계획</span>을 세우세요.' data-en='Research is ultimately validated <span class="hl">on the best stages</span>. Here are the <span class="hl">flagship venues, tiers, and deadlines</span> by field. Pick a target and <span class="hl">plan backward from the deadline</span>.'>연구는 결국 <span class="hl">최고의 무대에서 검증</span>됩니다. 분야별 <span class="hl">대표 학회와 등급·마감일</span>을 한눈에 모았습니다. 목표를 정하고, <span class="hl">마감에서 거꾸로 계획</span>을 세우세요.</p>
+  <div class="eyebrow" data-ko="TUPA LAB · 학회" data-en="TUPA LAB · Venues">TUPA LAB · 학회</div>
+  <h1 data-ko="분야별 <em>주요 학회</em>" data-en="<em>Key venues</em> by field">분야별 <em>주요 학회</em></h1>
+  <p class="lede" data-ko="분야별 대표 학회와 등급·제출기한을 한눈에 모았습니다." data-en="Flagship venues, tiers, and deadlines by field — at a glance.">분야별 대표 학회와 등급·제출기한을 한눈에 모았습니다.</p>
 </div></header>
 
 <section><div class="wrap">
@@ -63,56 +61,55 @@
     <span><span class="tier flag">분야</span><span data-ko="분야 대표 학회" data-en="Field flagship">분야 대표 학회</span></span>
   </div>
 
-  <div class="sec-eyebrow" data-ko="🔥 다가오는 마감 (2026 하반기)" data-en="🔥 Upcoming deadlines (H2 2026)">🔥 다가오는 마감 (2026 하반기)</div>
-  <p class="sec-sub" style="margin-top:.2rem" data-ko="가장 임박한 투고 마감부터. (월 단위 예상 — 정확한 날짜는 각 CFP 확인)" data-en="Soonest submission deadlines first. (month-level estimates — check each CFP for exact dates)">가장 임박한 투고 마감부터. (월 단위 예상 — 정확한 날짜는 각 CFP 확인)</p>
+  <div class="sec-eyebrow" data-ko="🔥 다가오는 제출기한" data-en="🔥 Upcoming deadlines">🔥 다가오는 제출기한</div>
+  <p class="sec-sub" style="margin-top:.2rem" data-ko="가장 임박한 순. ~ 표시는 작년 기준 예상." data-en="Soonest first. ~ marks last-year-based estimates.">가장 임박한 순. ~ 표시는 작년 기준 예상.</p>
   <div class="up-strip">
-    <div class="up-item"><b>INFOCOM 2027</b><span class="up-when">~2026.7</span></div>
-    <div class="up-item"><b>AAAI 2027</b><span class="up-when">~2026.7–8</span></div>
+    <div class="up-item"><b>INFOCOM 2027</b><span class="up-when">2026.7.24</span></div>
+    <div class="up-item"><b>AAAI 2027</b><span class="up-when">2026.7.27</span></div>
+    <div class="up-item"><b>CHI 2027</b><span class="up-when">2026.9.10</span></div>
     <div class="up-item"><b>ICLR 2027</b><span class="up-when">~2026.9</span></div>
-    <div class="up-item"><b>CHI 2027</b><span class="up-when">~2026.9</span></div>
     <div class="up-item"><b>HRI 2027</b><span class="up-when">~2026.9</span></div>
-    <div class="up-item"><b>CVPR 2027</b><span class="up-when">~2026.11</span></div>
+    <div class="up-item"><b>CVPR 2027</b><span class="up-when">2026.11.15</span></div>
   </div>
 
   <!-- AI · ML -->
   <div class="fieldsec">
     <h2><span>🤖</span><span data-ko="AI · 머신러닝" data-en="AI · Machine Learning">AI · 머신러닝</span></h2>
-    <div class="fsub" data-ko="우리 랩의 Physical AI·파운데이션 모델·RL 연구의 핵심 무대." data-en="Core stage for our Physical AI, foundation model, and RL work.">우리 랩의 Physical AI·파운데이션 모델·RL 연구의 핵심 무대.</div>
     <div class="confgrid">
       <div class="conf">
-        <div class="conf-top"><span class="conf-abbr">NeurIPS</span><span class="tier astar">A*</span></div>
-        <div class="conf-name">Conference on Neural Information Processing Systems</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2027.5 (예정)</div>
-        <div class="conf-meta">📅 NeurIPS 2026 · 2026.12<br>📍 Sydney / Atlanta / Paris</div>
-        <a class="conf-link" href="https://neurips.cc/" target="_blank">neurips.cc ↗</a>
-      </div>
-      <div class="conf">
-        <div class="conf-top"><span class="conf-abbr">ICML</span><span class="tier astar">A*</span></div>
-        <div class="conf-name">International Conference on Machine Learning</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2027.1 (예정)</div>
-        <div class="conf-meta">📅 ICML 2026 · 2026.7.6–11<br>📍 Seoul, South Korea</div>
-        <a class="conf-link" href="https://icml.cc/" target="_blank">icml.cc ↗</a>
+        <div class="conf-top"><span class="conf-abbr">AAAI</span><span class="tier astar">A*</span></div>
+        <div class="conf-name">AAAI Conference on Artificial Intelligence</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> 2026.7.27 <span style="color:var(--ink-muted)">(abstract 7.20)</span></div>
+        <div class="conf-meta">📅 AAAI 2027 · 2027.2.16–23<br>📍 Montréal, Canada</div>
+        <a class="conf-link" href="https://aaai.org/conference/aaai/aaai-27/" target="_blank">aaai.org/aaai-27 ↗</a>
       </div>
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">ICLR</span><span class="tier astar">A*</span></div>
         <div class="conf-name">International Conference on Learning Representations</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.9 (예정)</div>
-        <div class="conf-meta">📅 ICLR 2026 · 2026.4 (종료)<br>📍 Rio de Janeiro, Brazil</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2026.9 <span style="color:var(--ink-muted)" data-ko="(예정)" data-en="(est.)">(예정)</span></div>
+        <div class="conf-meta">📅 ICLR 2027 · 2027.4<br>📍 TBD</div>
         <a class="conf-link" href="https://iclr.cc/" target="_blank">iclr.cc ↗</a>
-      </div>
-      <div class="conf">
-        <div class="conf-top"><span class="conf-abbr">AAAI</span><span class="tier astar">A*</span></div>
-        <div class="conf-name">AAAI Conference on Artificial Intelligence</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.7–8 (예정)</div>
-        <div class="conf-meta">📅 AAAI 2027 · 2027.2.16–23<br>📍 Montréal, Canada</div>
-        <a class="conf-link" href="https://aaai.org/conference/aaai/" target="_blank">aaai.org ↗</a>
       </div>
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">IJCAI</span><span class="tier astar">A*</span></div>
         <div class="conf-name">International Joint Conference on Artificial Intelligence</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2027.1 (예정)</div>
-        <div class="conf-meta">📅 IJCAI 2026 · 2026.8.15–21<br>📍 Bremen, Germany</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> 2027.1.19</div>
+        <div class="conf-meta">📅 IJCAI 2027 · 2027.8.14–20<br>📍 TBD</div>
         <a class="conf-link" href="https://www.ijcai.org/" target="_blank">ijcai.org ↗</a>
+      </div>
+      <div class="conf">
+        <div class="conf-top"><span class="conf-abbr">ICML</span><span class="tier astar">A*</span></div>
+        <div class="conf-name">International Conference on Machine Learning</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2027.1 <span style="color:var(--ink-muted)" data-ko="(예정)" data-en="(est.)">(예정)</span></div>
+        <div class="conf-meta">📅 ICML 2027<br>📍 TBD</div>
+        <a class="conf-link" href="https://icml.cc/" target="_blank">icml.cc ↗</a>
+      </div>
+      <div class="conf">
+        <div class="conf-top"><span class="conf-abbr">NeurIPS</span><span class="tier astar">A*</span></div>
+        <div class="conf-name">Conference on Neural Information Processing Systems</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2027.5 <span style="color:var(--ink-muted)" data-ko="(예정)" data-en="(est.)">(예정)</span></div>
+        <div class="conf-meta">📅 NeurIPS 2027<br>📍 TBD</div>
+        <a class="conf-link" href="https://neurips.cc/" target="_blank">neurips.cc ↗</a>
       </div>
     </div>
   </div>
@@ -120,27 +117,26 @@
   <!-- Computer Vision -->
   <div class="fieldsec">
     <h2><span>👁️</span><span data-ko="컴퓨터 비전" data-en="Computer Vision">컴퓨터 비전</span></h2>
-    <div class="fsub" data-ko="Vision E2E·인지·월드모델 연구의 주 무대." data-en="Main stage for Vision E2E, perception, and world-model work.">Vision E2E·인지·월드모델 연구의 주 무대.</div>
     <div class="confgrid">
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">CVPR</span><span class="tier astar">A*</span></div>
         <div class="conf-name">IEEE/CVF Conf. on Computer Vision and Pattern Recognition</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.11 (예정)</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> 2026.11.15</div>
         <div class="conf-meta">📅 CVPR 2027 · 2027.6.19–26<br>📍 Seattle, USA</div>
         <a class="conf-link" href="https://cvpr.thecvf.com/" target="_blank">cvpr.thecvf.com ↗</a>
       </div>
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">ICCV</span><span class="tier astar">A*</span></div>
         <div class="conf-name">International Conference on Computer Vision</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2027.3 (예정, 격년 홀수해)</div>
-        <div class="conf-meta">📅 ICCV 2027 · TBD<br>📍 TBD</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2027.3 <span style="color:var(--ink-muted)" data-ko="(예정, 격년)" data-en="(est., biennial)">(예정, 격년)</span></div>
+        <div class="conf-meta">📅 ICCV 2027 · 2027.10<br>📍 Hong Kong</div>
         <a class="conf-link" href="https://iccv.thecvf.com/" target="_blank">iccv.thecvf.com ↗</a>
       </div>
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">ECCV</span><span class="tier a">A</span></div>
         <div class="conf-name">European Conference on Computer Vision</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2028 초 (예정, 격년 짝수해)</div>
-        <div class="conf-meta">📅 ECCV 2026 · 2026.9.8–13<br>📍 Malmö, Sweden</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2028 <span style="color:var(--ink-muted)" data-ko="(예정, 격년)" data-en="(est., biennial)">(예정, 격년)</span></div>
+        <div class="conf-meta">📅 ECCV 2028<br>📍 TBD</div>
         <a class="conf-link" href="https://eccv.ecva.net/" target="_blank">eccv.ecva.net ↗</a>
       </div>
     </div>
@@ -149,14 +145,13 @@
   <!-- Robotics / HRI -->
   <div class="fieldsec">
     <h2><span>🦾</span><span data-ko="로보틱스 · HRI" data-en="Robotics · HRI">로보틱스 · HRI</span></h2>
-    <div class="fsub" data-ko="휴머노이드·로봇 상호작용·sim-to-real 연구 무대." data-en="Stage for humanoid, human-robot interaction, and sim-to-real work.">휴머노이드·로봇 상호작용·sim-to-real 연구 무대.</div>
     <div class="confgrid">
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">HRI</span><span class="tier a">A</span></div>
         <div class="conf-name">ACM/IEEE Int. Conf. on Human-Robot Interaction</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.9 (예정)</div>
-        <div class="conf-meta">📅 HRI 2027 · 2027.3.8–12<br>📍 Silicon Valley, USA</div>
-        <a class="conf-link" href="https://humanrobotinteraction.org/" target="_blank">humanrobotinteraction.org ↗</a>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2026.9 <span style="color:var(--ink-muted)" data-ko="(예정)" data-en="(est.)">(예정)</span></div>
+        <div class="conf-meta">📅 HRI 2027 · 2027.3.8–12<br>📍 Santa Clara, USA</div>
+        <a class="conf-link" href="https://humanrobotinteraction.org/2027/" target="_blank">humanrobotinteraction.org ↗</a>
       </div>
     </div>
   </div>
@@ -164,19 +159,18 @@
   <!-- Transportation / Mobility -->
   <div class="fieldsec">
     <h2><span>🚦</span><span data-ko="교통 · 모빌리티" data-en="Transportation · Mobility">교통 · 모빌리티</span></h2>
-    <div class="fsub" data-ko="자율주행·교통이론·보행/대피 시뮬레이션 — 우리 랩의 뿌리." data-en="Autonomous driving, traffic theory, pedestrian/evacuation simulation — our roots.">자율주행·교통이론·보행/대피 시뮬레이션 — 우리 랩의 뿌리.</div>
     <div class="confgrid">
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">ISTTT</span><span class="tier flag" data-ko="교통" data-en="Field">교통</span></div>
         <div class="conf-name">Int. Symposium on Transportation and Traffic Theory</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> TBD</div>
-        <div class="conf-meta" data-ko="📅 일정 미정<br>🏅 교통이론 최고 권위" data-en="📅 TBD<br>🏅 Premier in traffic theory">📅 일정 미정<br>🏅 교통이론 최고 권위</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2027 <span style="color:var(--ink-muted)" data-ko="(ISTTT27, 예정)" data-en="(ISTTT27, est.)">(ISTTT27, 예정)</span></div>
+        <div class="conf-meta" data-ko="🏅 교통이론 최고 권위 · 격년" data-en="🏅 Premier in traffic theory · biennial">🏅 교통이론 최고 권위 · 격년</div>
       </div>
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">PED</span><span class="tier flag" data-ko="전문" data-en="Specialized">전문</span></div>
         <div class="conf-name">Pedestrian and Evacuation Dynamics</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> 2027.2 (abstract) / 2027.11 (full)</div>
-        <div class="conf-meta" data-ko="📅 PED 2027 · 2027.9<br>📍 Beijing, China · 격년 개최" data-en="📅 PED 2027 · 2027.9<br>📍 Beijing, China · biennial">📅 PED 2027 · 2027.9<br>📍 Beijing, China · 격년 개최</div>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> ~2027.2 <span style="color:var(--ink-muted)" data-ko="(예정)" data-en="(est.)">(예정)</span></div>
+        <div class="conf-meta">📅 PED 2027 · 2027.9<br>📍 Beijing, China · <span data-ko="격년" data-en="biennial">격년</span></div>
       </div>
     </div>
   </div>
@@ -184,14 +178,13 @@
   <!-- HCI -->
   <div class="fieldsec">
     <h2><span>🧑‍💻</span><span data-ko="HCI" data-en="HCI">HCI</span></h2>
-    <div class="fsub" data-ko="사용자·인터랙션 중심 연구 무대." data-en="Stage for user- and interaction-centered research.">사용자·인터랙션 중심 연구 무대.</div>
     <div class="confgrid">
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">CHI</span><span class="tier astar">A*</span></div>
         <div class="conf-name">ACM Conf. on Human Factors in Computing Systems</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.9 (예정)</div>
-        <div class="conf-meta">📅 CHI 2027 · 2027.5.10–14<br>📍 Pittsburgh, USA</div>
-        <a class="conf-link" href="https://chi.acm.org/" target="_blank">chi.acm.org ↗</a>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> 2026.9.10</div>
+        <div class="conf-meta">📅 CHI 2027 · 2027.5<br>📍 Pittsburgh, USA</div>
+        <a class="conf-link" href="https://chi2027.acm.org/" target="_blank">chi2027.acm.org ↗</a>
       </div>
     </div>
   </div>
@@ -199,20 +192,18 @@
   <!-- Networking -->
   <div class="fieldsec">
     <h2><span>🌐</span><span data-ko="네트워킹 · 통신" data-en="Networking">네트워킹 · 통신</span></h2>
-    <div class="fsub" data-ko="V2X·노변 통신·인프라 연계 연구 무대." data-en="Stage for V2X, roadside comms, and infrastructure-linked work.">V2X·노변 통신·인프라 연계 연구 무대.</div>
     <div class="confgrid">
       <div class="conf">
         <div class="conf-top"><span class="conf-abbr">INFOCOM</span><span class="tier astar">A*</span></div>
         <div class="conf-name">IEEE Conference on Computer Communications</div>
-        <div class="conf-dl"><b data-ko="다음 마감" data-en="Next deadline">다음 마감</b> ~2026.7 (예정)</div>
-        <div class="conf-meta">📅 INFOCOM 2027 · 2027.5.24–27<br>📍 Hawaii, USA</div>
-        <a class="conf-link" href="https://infocom.ieee-infocom.org/" target="_blank">ieee-infocom.org ↗</a>
+        <div class="conf-dl"><b data-ko="제출기한" data-en="Deadline">제출기한</b> 2026.7.24 <span style="color:var(--ink-muted)">(abstract 7.17)</span></div>
+        <div class="conf-meta">📅 INFOCOM 2027 · 2027.5<br>📍 Honolulu, USA</div>
+        <a class="conf-link" href="https://infocom2027.ieee-infocom.org/" target="_blank">ieee-infocom.org ↗</a>
       </div>
     </div>
   </div>
 
-  <div class="callout srcnote" data-ko="<b>마감일은 예상치입니다</b> — 정확한 일정은 각 학회 CFP를 확인하세요. 등급은 CORE2023 등 통용 기준 참고용. 원본·최신 표는 공용 시트에서 관리합니다." data-en="<b>Deadlines are estimates</b> — check each conference CFP for exact dates. Tiers reference CORE2023 and common practice. The source/latest table is maintained in the shared sheet."><b>마감일은 예상치입니다</b> — 정확한 일정은 각 학회 CFP를 확인하세요. 등급은 CORE2023 등 통용 기준 참고용. 원본·최신 표는 공용 시트에서 관리합니다.</div>
-  <a class="btn-notion" href="https://docs.google.com/spreadsheets/d/17aQmu44zvMRz1dvw_xChR_dRG5bMalfRkSvGaJLMJpM/edit" target="_blank" data-ko="📅 원본 시트 (Conference Timeline) 열기 →" data-en="📅 Open source sheet (Conference Timeline) →">📅 원본 시트 (Conference Timeline) 열기 →</a>
+  <div class="callout srcnote" data-ko="<b>‘예정(~)’ 표시는 작년 기준 추정</b>이고, 날짜가 확정된 학회는 공식 CFP 기준입니다. 정확한 일정은 각 학회 CFP를 확인하세요. 등급은 CORE 등 통용 기준 참고용." data-en="<b>‘~’ marks last-year-based estimates</b>; dated venues follow the official CFP. Check each conference CFP for exact dates. Tiers reference CORE and common practice."><b>‘예정(~)’ 표시는 작년 기준 추정</b>이고, 날짜가 확정된 학회는 공식 CFP 기준입니다. 정확한 일정은 각 학회 CFP를 확인하세요. 등급은 CORE 등 통용 기준 참고용.</div>
 </div></section>
 
 <script src="tupa.js"></script>
