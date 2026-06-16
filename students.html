@@ -20,7 +20,10 @@
 a.stu:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--shadow);border-color:var(--navy-soft)}
 .stu-name{font-size:1.06rem;font-weight:800;color:var(--navy-deep);letter-spacing:-.01em}
 .stu-kor{font-size:.82rem;color:var(--ink-muted);margin-top:.05rem}
-.stu-topic{font-size:.9rem;color:var(--ink-soft);line-height:1.45;margin-top:.5rem;flex:1}
+.stu-topic{font-size:.9rem;color:var(--ink-soft);line-height:1.5;margin-top:.5rem;flex:1}
+.stu-topic .tl{display:block;position:relative;padding-left:.7rem}
+.stu-topic .tl::before{content:"";position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--navy-soft)}
+.stu-topic .tl + .tl{margin-top:.4rem}
 .stu-go{margin-top:.6rem;font-size:.8rem;font-weight:700;color:var(--navy-soft)}
 .stu.nolink{opacity:.9}
 .star{color:var(--navy-soft);font-size:.8rem;font-weight:800}
@@ -47,46 +50,46 @@ a.stu:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--shadow);borde
   <div class="teamsec">
     <h2>🛣️ Infra-AV <span class="tlead">· 오태호 (Taeho Oh)</span></h2>
     <div class="stugrid">
-      <div class="stu nolink"><div class="stu-name">Taeho Oh <span class="star">★</span></div><div class="stu-kor">오태호</div><div class="stu-topic" data-ko="인프라 중심 자율주행 제어 프레임워크" data-en="Infrastructure-centric autonomous driving control framework">인프라 중심 자율주행 제어 프레임워크</div></div>
-      <a class="stu" href="https://www.notion.so/RESEARCH-INTRODUCTION-2dc2174af9e5801b833ef49d8f8b56e0" target="_blank"><div class="stu-name">Truyen Le-Minh</div><div class="stu-kor">트루엔</div><div class="stu-topic" data-ko="인프라 중심 자율주행 인지" data-en="Infrastructure-centric autonomous driving perception">인프라 중심 자율주행 인지</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://nettle-leaf-e45.notion.site/Jungyoon-Kim-2d163afe0c228021b6cedab4662cc47a" target="_blank"><div class="stu-name">JungYoon Kim</div><div class="stu-kor">김정윤</div><div class="stu-topic" data-ko="인프라 기반 자율주행" data-en="Infrastructure-based autonomous driving">인프라 기반 자율주행</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <div class="stu nolink"><div class="stu-name">Yonghui Liu</div><div class="stu-kor">용휘</div><div class="stu-topic" data-ko="자율주행 인프라" data-en="Autonomous driving infrastructure">자율주행 인프라</div></div>
+      <div class="stu nolink"><div class="stu-name">Taeho Oh <span class="star">★</span></div><div class="stu-kor">오태호</div><div class="stu-topic">Infrastructure-centric autonomous driving control framework</div></div>
+      <a class="stu" href="https://www.notion.so/RESEARCH-INTRODUCTION-2dc2174af9e5801b833ef49d8f8b56e0" target="_blank"><div class="stu-name">Truyen Le-Minh</div><div class="stu-kor">트루엔</div><div class="stu-topic">Infrastructure-centric autonomous driving perception</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://nettle-leaf-e45.notion.site/Jungyoon-Kim-2d163afe0c228021b6cedab4662cc47a" target="_blank"><div class="stu-name">JungYoon Kim</div><div class="stu-kor">김정윤</div><div class="stu-topic">Infrastructure-based autonomous driving</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <div class="stu nolink"><div class="stu-name">Yonghui Liu</div><div class="stu-kor">용휘</div><div class="stu-topic">Autonomous driving infrastructure</div></div>
     </div>
   </div>
 
   <div class="teamsec">
     <h2>🚨 Disaster AI <span class="tlead">· 임등봉 (Tengfeng Lin)</span></h2>
     <div class="stugrid">
-      <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-2dc87f4669fa804eae59e104ebfc2d8b" target="_blank"><div class="stu-name">Tengfeng Lin <span class="star">★</span></div><div class="stu-kor">임등봉</div><div class="stu-topic" data-ko="K-건설 인프라 레질리언스 (재난·대피)" data-en="K-construction infrastructure resilience (disaster & evacuation)">K-건설 인프라 레질리언스 (재난·대피)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://ericmk.notion.site/RESEARCH-TOPIC-2de70c425f4880ac96ebce65d630f83b" target="_blank"><div class="stu-name">Eric Min Kim</div><div class="stu-kor">김 민</div><div class="stu-topic" data-ko="공유 마이크로 EV 충전수요 시공간 분석" data-en="Spatiotemporal analysis of shared micro-EV charging demand">공유 마이크로 EV 충전수요 시공간 분석</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://slender-soybean-f3f.notion.site/Robot-as-a-Crowd-Flow-Regulator-2dac9e9c84c58062bd34dee2a674cb44" target="_blank"><div class="stu-name">Junyoung Kim</div><div class="stu-kor">김준영</div><div class="stu-topic" data-ko="로봇 기반 군중 흐름 제어" data-en="Robot-based crowd flow regulation">로봇 기반 군중 흐름 제어</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-352b8e366ee3805291a6fd9265a3e579" target="_blank"><div class="stu-name">Yegi Yoo</div><div class="stu-kor">유예지</div><div class="stu-topic" data-ko="재난·대피 시뮬레이션" data-en="Disaster & evacuation simulation">재난·대피 시뮬레이션</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://www.notion.so/Optimizing-Mixed-Fleet-Operations-Autonomous-and-Human-Driven-Vehicles-with-Integrated-Charging-Man-2de9d7cdcc2780d6953ad192873c17dd" target="_blank"><div class="stu-name">Ng Hui Zhi</div><div class="stu-kor">황혜지</div><div class="stu-topic" data-ko="혼합 차량군(자율+인간) 운영·충전 통합 최적화" data-en="Integrated operation & charging optimization for mixed fleets (autonomous + human-driven)">혼합 차량군(자율+인간) 운영·충전 통합 최적화</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-2dc87f4669fa804eae59e104ebfc2d8b" target="_blank"><div class="stu-name">Tengfeng Lin <span class="star">★</span></div><div class="stu-kor">임등봉</div><div class="stu-topic">K-construction infrastructure resilience (disaster & evacuation)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://ericmk.notion.site/RESEARCH-TOPIC-2de70c425f4880ac96ebce65d630f83b" target="_blank"><div class="stu-name">Eric Min Kim</div><div class="stu-kor">김 민</div><div class="stu-topic">Spatiotemporal analysis of shared micro-EV charging demand</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://slender-soybean-f3f.notion.site/Robot-as-a-Crowd-Flow-Regulator-2dac9e9c84c58062bd34dee2a674cb44" target="_blank"><div class="stu-name">Junyoung Kim</div><div class="stu-kor">김준영</div><div class="stu-topic">Robot-based crowd flow regulation</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-352b8e366ee3805291a6fd9265a3e579" target="_blank"><div class="stu-name">Yegi Yoo</div><div class="stu-kor">유예지</div><div class="stu-topic">Disaster & evacuation simulation</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/Optimizing-Mixed-Fleet-Operations-Autonomous-and-Human-Driven-Vehicles-with-Integrated-Charging-Man-2de9d7cdcc2780d6953ad192873c17dd" target="_blank"><div class="stu-name">Ng Hui Zhi</div><div class="stu-kor">황혜지</div><div class="stu-topic">Integrated operation & charging optimization for mixed fleets (autonomous + human-driven)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
     </div>
   </div>
 
   <div class="teamsec">
     <h2>🤖 Physical AI <span class="tlead">· 박현철 (Hyunchul Park)</span></h2>
     <div class="stugrid">
-      <a class="stu" href="https://hyunchul176.github.io/research.html" target="_blank"><div class="stu-name">Hyunchul Park <span class="star">★</span></div><div class="stu-kor">박현철</div><div class="stu-topic" data-ko="Physical AI · 휴머노이드 드라이버<br>자율주행 안전성 평가 (시뮬레이션 스트레스 테스트)<br>Human-centric 교통안전 (VR 기반)" data-en="Physical AI · humanoid drivers<br>AV safety evaluation (simulation stress testing)<br>Human-centric traffic safety (VR-based)">Physical AI · 휴머노이드 드라이버<br>자율주행 안전성 평가 (시뮬레이션 스트레스 테스트)<br>Human-centric 교통안전 (VR 기반)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://www.notion.so/Research-Topic-2d9cd26708a080d580e2c6c8958da889" target="_blank"><div class="stu-name">Jaehyuck Lim</div><div class="stu-kor">임재혁</div><div class="stu-topic" data-ko="Physical AI" data-en="Physical AI">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://superb-mandevilla-d00.notion.site/RESEARCH-TOPIC-2db7e5a2725d8077907af0d3d0bb8abb" target="_blank"><div class="stu-name">MyeongHyeon Kim</div><div class="stu-kor">김명현</div><div class="stu-topic" data-ko="Physical AI" data-en="Physical AI">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://hyunchul176.github.io/research.html" target="_blank"><div class="stu-name">Hyunchul Park <span class="star">★</span></div><div class="stu-kor">박현철</div><div class="stu-topic"><span class="tl">V2X-aware humanoid drivers</span><span class="tl">Autonomous vehicle safety evaluation</span><span class="tl">Human-centric traffic safety</span></div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/Research-Topic-2d9cd26708a080d580e2c6c8958da889" target="_blank"><div class="stu-name">Jaehyuck Lim</div><div class="stu-kor">임재혁</div><div class="stu-topic">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://superb-mandevilla-d00.notion.site/RESEARCH-TOPIC-2db7e5a2725d8077907af0d3d0bb8abb" target="_blank"><div class="stu-name">MyeongHyeon Kim</div><div class="stu-kor">김명현</div><div class="stu-topic">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
     </div>
   </div>
 
   <div class="teamsec">
     <h2>🧭 Mobility ABM <span class="tlead">· 권동현 (Donghyun Sean Kwon)</span></h2>
     <div class="stugrid">
-      <a class="stu" href="https://sites.google.com/d/18eMv5350-seS996esRrrpw00RgRzVlqI/p/1THDZ_FEA0ctLT53LzR7NmowC-Kk19SkW/edit" target="_blank"><div class="stu-name">Donghyun (Sean) Kwon <span class="star">★</span></div><div class="stu-kor">권동현</div><div class="stu-topic" data-ko="LLM 기반 행위자 기반 모델링(ABM)" data-en="LLM-driven agent-based modeling (ABM)">LLM 기반 행위자 기반 모델링(ABM)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://www.notion.so/RESEARCH-DIRECTION-2da908b120a28000a17fc775d484030a" target="_blank"><div class="stu-name">Kervin Joshua Lucas</div><div class="stu-kor">커브</div><div class="stu-topic" data-ko="LLM 기반 모빌리티 시뮬레이션" data-en="LLM-driven mobility simulation">LLM 기반 모빌리티 시뮬레이션</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://sites.google.com/d/18eMv5350-seS996esRrrpw00RgRzVlqI/p/1THDZ_FEA0ctLT53LzR7NmowC-Kk19SkW/edit" target="_blank"><div class="stu-name">Donghyun (Sean) Kwon <span class="star">★</span></div><div class="stu-kor">권동현</div><div class="stu-topic">LLM-driven agent-based modeling (ABM)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/RESEARCH-DIRECTION-2da908b120a28000a17fc775d484030a" target="_blank"><div class="stu-name">Kervin Joshua Lucas</div><div class="stu-kor">커브</div><div class="stu-topic">LLM-driven mobility simulation</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
     </div>
   </div>
 
   <div class="teamsec">
     <h2>🏙️ Urban <span class="tlead">· 카이한 (Kaihan Zhang)</span></h2>
     <div class="stugrid">
-      <a class="stu" href="https://kaihanzhang.github.io/kaihanzhang/" target="_blank"><div class="stu-name">Kaihan Zhang <span class="star">★</span></div><div class="stu-kor">카이한</div><div class="stu-topic" data-ko="도시 모빌리티" data-en="Urban mobility">도시 모빌리티</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
-      <a class="stu" href="https://www.notion.so/Research-Introduction-2deade7f673d8066bb4df7b6e8e898aa" target="_blank"><div class="stu-name">Reuben Tamakloe</div><div class="stu-kor">루벤</div><div class="stu-topic" data-ko="도시 모빌리티 · 교통 데이터" data-en="Urban mobility · transport data">도시 모빌리티 · 교통 데이터</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://kaihanzhang.github.io/kaihanzhang/" target="_blank"><div class="stu-name">Kaihan Zhang <span class="star">★</span></div><div class="stu-kor">카이한</div><div class="stu-topic">Urban mobility</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+      <a class="stu" href="https://www.notion.so/Research-Introduction-2deade7f673d8066bb4df7b6e8e898aa" target="_blank"><div class="stu-name">Reuben Tamakloe</div><div class="stu-kor">루벤</div><div class="stu-topic">Urban mobility · transport data</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
     </div>
   </div>
 
