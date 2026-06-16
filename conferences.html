@@ -23,10 +23,9 @@
 .rmsub{font-size:.85rem;color:var(--ink-muted);margin-bottom:1.1rem}
 .roadmap{display:flex;overflow-x:auto;padding:.2rem 0 .6rem}
 .rm-item{flex:1 0 auto;min-width:118px;text-align:center;position:relative}
-.rm-card{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem .65rem;box-shadow:0 3px 10px var(--shadow);margin-bottom:.7rem}
-.rm-name{font-size:1.04rem;font-weight:800;letter-spacing:-.01em;color:var(--navy-deep);margin-bottom:.5rem}
-.rm-date{display:inline-block;font-size:.82rem;font-weight:800;background:var(--warn);color:var(--surface);padding:.22rem .6rem;border-radius:99px;white-space:nowrap}
-.rm-est{font-weight:600;opacity:.85}
+.rm-name{font-size:1rem;font-weight:800;letter-spacing:-.01em;color:var(--navy-deep);margin-bottom:.55rem}
+.rm-date{margin-top:.55rem;font-size:.92rem;font-weight:700;color:var(--warn);white-space:nowrap}
+.rm-est{font-size:.74rem;font-weight:600;color:var(--ink-muted)}
 .rm-line{position:relative;height:14px}
 .rm-line::before{content:"";position:absolute;top:50%;left:0;right:0;height:3px;background:color-mix(in oklch,var(--warn) 32%,var(--line));transform:translateY(-50%)}
 .rm-item:first-child .rm-line::before{left:50%}
@@ -41,8 +40,8 @@
 .conf-abbr{font-weight:800;font-size:1.24rem;letter-spacing:-.01em;color:var(--navy-deep);display:flex;align-items:center}
 .conf-yr{font-size:.74rem;font-weight:800;background:var(--navy);color:var(--surface);padding:.12rem .44rem;border-radius:6px;margin-right:.5rem;letter-spacing:.01em}
 .conf-name{font-size:.9rem;color:var(--ink-soft);line-height:1.5;min-height:2.7em;font-weight:500}
-.conf-dl{font-size:.94rem;color:var(--ink);background:color-mix(in oklch,var(--warn) 10%,var(--surface-2));border-radius:8px;padding:.5rem .7rem;font-weight:500}
-.conf-dl b{color:var(--warn);font-weight:800}
+.conf-dl{font-size:.9rem;color:var(--ink-soft)}
+.conf-dl b{color:var(--navy-soft);font-weight:700;margin-right:.15rem}
 .conf-meta{font-size:.88rem;color:var(--ink-soft);line-height:1.7}
 .conf-link{align-self:flex-start;font-size:.86rem;font-weight:700;color:var(--navy-soft);text-decoration:none}
 .conf-link:hover{text-decoration:underline}
@@ -74,12 +73,12 @@
   <div class="rmwrap">
     <div class="rmtitle" data-ko="🔥 다가오는 제출기한" data-en="🔥 Upcoming deadlines">🔥 다가오는 제출기한</div>
     <div class="roadmap">
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">INFOCOM</div><div class="rm-date">2026.7.24</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">AAAI</div><div class="rm-date">2026.7.27</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">CHI</div><div class="rm-date">2026.9.10</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">ICLR</div><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">HRI</div><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
-      <div class="rm-item"><div class="rm-card"><div class="rm-name">CVPR</div><div class="rm-date">2026.11.15</div></div><div class="rm-line"><span class="rm-dot"></span></div></div>
+      <div class="rm-item"><div class="rm-name">INFOCOM</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.7.24</div></div>
+      <div class="rm-item"><div class="rm-name">AAAI</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.7.27</div></div>
+      <div class="rm-item"><div class="rm-name">CHI</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.9.10</div></div>
+      <div class="rm-item"><div class="rm-name">ICLR</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div></div>
+      <div class="rm-item"><div class="rm-name">HRI</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.9 <span class="rm-est" data-ko="(예상)" data-en="(est.)">(예상)</span></div></div>
+      <div class="rm-item"><div class="rm-name">CVPR</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-date">2026.11.15</div></div>
     </div>
   </div>
 
