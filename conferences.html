@@ -23,13 +23,13 @@
 .rmsub{font-size:.85rem;color:var(--ink-muted);margin-bottom:1.1rem}
 .roadmap{display:flex;overflow-x:auto;padding:.2rem 0 .6rem}
 .rm-item{flex:1 0 auto;min-width:118px;text-align:center;position:relative}
-.rm-date{font-size:1rem;font-weight:800;color:var(--warn);margin-bottom:.5rem}
+.rm-date{display:inline-block;font-size:.92rem;font-weight:800;color:var(--warn);background:color-mix(in oklch,var(--warn) 14%,var(--surface));border:1px solid color-mix(in oklch,var(--warn) 32%,var(--line));padding:.2rem .6rem;border-radius:99px;margin-bottom:.6rem}
 .rm-line{position:relative;height:16px}
 .rm-line::before{content:"";position:absolute;top:50%;left:0;right:0;height:3px;background:color-mix(in oklch,var(--warn) 32%,var(--line));transform:translateY(-50%)}
 .rm-item:first-child .rm-line::before{left:50%}
 .rm-item:last-child .rm-line::before{right:50%}
 .rm-dot{position:absolute;top:50%;left:50%;width:15px;height:15px;border-radius:50%;background:var(--warn);transform:translate(-50%,-50%);box-shadow:0 0 0 4px var(--bg)}
-.rm-name{margin-top:.5rem;font-size:.96rem;font-weight:800;color:var(--navy-deep)}
+.rm-name{display:inline-block;margin-top:.6rem;font-size:.92rem;font-weight:800;color:var(--navy-deep);background:var(--surface);border:1px solid var(--line);padding:.32rem .7rem;border-radius:9px;box-shadow:0 1px 2px var(--shadow)}
 .fieldsec{margin-top:2.2rem}
 .fieldsec h2{display:flex;align-items:center;gap:.5rem;font-size:1.15rem;font-weight:800;color:var(--navy-deep);margin-bottom:.9rem}
 .confgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem}
