@@ -18,10 +18,18 @@
 [data-theme="dark"] .tier.astar{background:color-mix(in oklch,#e6b800 32%,var(--surface));color:#ffe08a}
 .tier.a{background:color-mix(in oklch,var(--navy-soft) 22%,var(--surface));color:var(--navy-deep)}
 .tier.flag{background:color-mix(in oklch,var(--transport) 24%,var(--surface));color:var(--transport)}
-.up-strip{display:flex;flex-wrap:wrap;gap:.6rem;margin:.7rem 0 .4rem}
-.up-item{display:flex;align-items:center;gap:.7rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:10px;padding:.62rem .9rem}
-.up-item b{font-size:.98rem;color:var(--navy-deep);font-weight:700}
-.up-when{font-size:.86rem;color:var(--warn);font-weight:700;white-space:nowrap}
+.rmwrap{margin:.2rem 0 .6rem}
+.rmtitle{font-size:1.08rem;font-weight:800;color:var(--navy-deep);margin-bottom:.2rem}
+.rmsub{font-size:.85rem;color:var(--ink-muted);margin-bottom:1.1rem}
+.roadmap{display:flex;overflow-x:auto;padding:.2rem 0 .6rem}
+.rm-item{flex:1 0 auto;min-width:118px;text-align:center;position:relative}
+.rm-date{font-size:1rem;font-weight:800;color:var(--warn);margin-bottom:.5rem}
+.rm-line{position:relative;height:16px}
+.rm-line::before{content:"";position:absolute;top:50%;left:0;right:0;height:3px;background:color-mix(in oklch,var(--warn) 32%,var(--line));transform:translateY(-50%)}
+.rm-item:first-child .rm-line::before{left:50%}
+.rm-item:last-child .rm-line::before{right:50%}
+.rm-dot{position:absolute;top:50%;left:50%;width:15px;height:15px;border-radius:50%;background:var(--warn);transform:translate(-50%,-50%);box-shadow:0 0 0 4px var(--bg)}
+.rm-name{margin-top:.5rem;font-size:.96rem;font-weight:800;color:var(--navy-deep)}
 .fieldsec{margin-top:2.2rem}
 .fieldsec h2{display:flex;align-items:center;gap:.5rem;font-size:1.15rem;font-weight:800;color:var(--navy-deep);margin-bottom:.9rem}
 .confgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.9rem}
@@ -52,7 +60,6 @@
 <header class="hero"><div class="wrap">
   <div class="eyebrow" data-ko="TUPA LAB · 학회" data-en="TUPA LAB · Venues">TUPA LAB · 학회</div>
   <h1 data-ko="분야별 <em>주요 학회</em>" data-en="<em>Key venues</em> by field">분야별 <em>주요 학회</em></h1>
-  <p class="lede" data-ko="분야별 대표 학회와 등급·제출기한을 한눈에 모았습니다." data-en="Flagship venues, tiers, and deadlines by field — at a glance.">분야별 대표 학회와 등급·제출기한을 한눈에 모았습니다.</p>
 </div></header>
 
 <section><div class="wrap">
@@ -62,15 +69,17 @@
     <span><span class="tier flag">분야</span><span data-ko="분야 대표 학회" data-en="Field flagship">분야 대표 학회</span></span>
   </div>
 
-  <div class="sec-eyebrow" data-ko="🔥 다가오는 제출기한" data-en="🔥 Upcoming deadlines">🔥 다가오는 제출기한</div>
-  <p class="sec-sub" style="margin-top:.2rem" data-ko="가장 임박한 순. ~ 표시는 작년 기준 예상." data-en="Soonest first. ~ marks last-year-based estimates.">가장 임박한 순. ~ 표시는 작년 기준 예상.</p>
-  <div class="up-strip">
-    <div class="up-item"><b>INFOCOM 2027</b><span class="up-when">2026.7.24</span></div>
-    <div class="up-item"><b>AAAI 2027</b><span class="up-when">2026.7.27</span></div>
-    <div class="up-item"><b>CHI 2027</b><span class="up-when">2026.9.10</span></div>
-    <div class="up-item"><b>ICLR 2027</b><span class="up-when">~2026.9</span></div>
-    <div class="up-item"><b>HRI 2027</b><span class="up-when">~2026.9</span></div>
-    <div class="up-item"><b>CVPR 2027</b><span class="up-when">2026.11.15</span></div>
+  <div class="rmwrap">
+    <div class="rmtitle" data-ko="🔥 다가오는 제출기한" data-en="🔥 Upcoming deadlines">🔥 다가오는 제출기한</div>
+    <div class="rmsub" data-ko="2026년 하반기 · 임박한 순 (~ 는 예상)" data-en="H2 2026 · soonest first (~ = estimate)">2026년 하반기 · 임박한 순 (~ 는 예상)</div>
+    <div class="roadmap">
+      <div class="rm-item"><div class="rm-date">7.24</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">INFOCOM</div></div>
+      <div class="rm-item"><div class="rm-date">7.27</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">AAAI</div></div>
+      <div class="rm-item"><div class="rm-date">9.10</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">CHI</div></div>
+      <div class="rm-item"><div class="rm-date">~9</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">ICLR</div></div>
+      <div class="rm-item"><div class="rm-date">~9</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">HRI</div></div>
+      <div class="rm-item"><div class="rm-date">11.15</div><div class="rm-line"><span class="rm-dot"></span></div><div class="rm-name">CVPR</div></div>
+    </div>
   </div>
 
   <!-- AI · ML -->
