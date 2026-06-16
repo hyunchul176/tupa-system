@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연구원 연구 주제 · TUPA Lab</title>
+<meta name="description" content="TUPA Lab 연구원별 연구 주제 — 이름을 누르면 연구 소개로.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var s=localStorage.getItem('tupa-theme');var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+<link rel="stylesheet" href="tupa.css">
+<style>
+.stugrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:.9rem;margin-top:.5rem}
+.stu{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s}
+a.stu:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--shadow);border-color:var(--navy-soft)}
+.stu-name{font-size:1.06rem;font-weight:800;color:var(--navy-deep);letter-spacing:-.01em}
+.stu-kor{font-size:.82rem;color:var(--ink-muted);margin-top:.05rem}
+.stu-topic{font-size:.9rem;color:var(--ink-soft);line-height:1.45;margin-top:.5rem;flex:1}
+.stu-go{margin-top:.6rem;font-size:.8rem;font-weight:700;color:var(--navy-soft)}
+.stu.nolink{opacity:.9}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<nav><div class="wrap">
+  <a class="navbrand" href="index.html"><img class="nav-logo" src="tupa-logo.png" alt="TUPA · Transport and Urban Planning Arena"></a>
+  <a href="index.html" data-ko="← 허브" data-en="← Hub">← 허브</a><a href="https://tupa-dashboard.qkrguscjf176.workers.dev" target="_blank" data-ko="대시보드 ↗" data-en="Dashboard ↗">대시보드 ↗</a><a href="https://inhi.kim/" target="_blank" data-ko="연구실 홈 ↗" data-en="Lab Home ↗">연구실 홈 ↗</a>
+  <span class="sp"></span>
+  <button class="theme-btn" id="langBtn" title="한국어 / English">EN</button>
+  <button class="theme-btn" id="themeBtn" title="다크/라이트 전환">🌙</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow" data-ko="TUPA LAB · 연구원" data-en="TUPA LAB · Researchers">TUPA LAB · 연구원</div>
+  <h1 data-ko="연구원 <em>연구 주제</em>" data-en="Researcher <em>Topics</em>">연구원 <em>연구 주제</em></h1>
+  <p class="lede" data-ko="이름을 누르면 각자의 연구 소개 페이지로 이동합니다." data-en="Click a name to open that researcher's research intro.">이름을 누르면 각자의 연구 소개 페이지로 이동합니다.</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="stugrid">
+    <a class="stu" href="https://sites.google.com/d/18eMv5350-seS996esRrrpw00RgRzVlqI/p/1THDZ_FEA0ctLT53LzR7NmowC-Kk19SkW/edit" target="_blank"><div class="stu-name">Donghyun (Sean) Kwon</div><div class="stu-kor">권동현</div><div class="stu-topic">LLM 기반 행위자 기반 모델링(ABM)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://hyunchul176.github.io/research.html" target="_blank"><div class="stu-name">Hyunchul Park</div><div class="stu-kor">박현철</div><div class="stu-topic">Physical AI · 휴머노이드 보행 강화학습</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Optimizing-Mixed-Fleet-Operations-Autonomous-and-Human-Driven-Vehicles-with-Integrated-Charging-Man-2de9d7cdcc2780d6953ad192873c17dd" target="_blank"><div class="stu-name">Ng Hui Zhi</div><div class="stu-kor">황혜지</div><div class="stu-topic">혼합 차량군(자율+인간) 운영·충전 통합 최적화</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://slender-soybean-f3f.notion.site/Robot-as-a-Crowd-Flow-Regulator-2dac9e9c84c58062bd34dee2a674cb44" target="_blank"><div class="stu-name">Junyoung Kim</div><div class="stu-kor">김준영</div><div class="stu-topic">로봇 기반 군중 흐름 제어</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://ericmk.notion.site/RESEARCH-TOPIC-2de70c425f4880ac96ebce65d630f83b" target="_blank"><div class="stu-name">Eric Min Kim</div><div class="stu-kor">김 민</div><div class="stu-topic">공유 마이크로 EV 충전수요 시공간 분석</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Analysis-Public-Transport-Accessibility-2db901b79d6a8001bd66d4ca637c9173" target="_blank"><div class="stu-name">Songmi Paek</div><div class="stu-kor">백송미</div><div class="stu-topic">대중교통 접근성 분석</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-2dc87f4669fa804eae59e104ebfc2d8b" target="_blank"><div class="stu-name">Tengfeng Lin</div><div class="stu-kor">임등봉</div><div class="stu-topic">K-건설 인프라 레질리언스 (재난·대피)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://kaihanzhang.github.io/kaihanzhang/" target="_blank"><div class="stu-name">Kaihan Zhang</div><div class="stu-kor">카이한</div><div class="stu-topic">도시 모빌리티 (Urban)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/RESEARCH-DIRECTION-2da908b120a28000a17fc775d484030a" target="_blank"><div class="stu-name">Kervin Joshua Lucas</div><div class="stu-kor">커브</div><div class="stu-topic">LLM 기반 모빌리티 시뮬레이션</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/RESEARCH-INTRODUCTION-2dc2174af9e5801b833ef49d8f8b56e0" target="_blank"><div class="stu-name">Truyen Le-Minh</div><div class="stu-kor">트루엔</div><div class="stu-topic">인프라 중심 자율주행 인지</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Research-Topic-2d9cd26708a080d580e2c6c8958da889" target="_blank"><div class="stu-name">Jaehyuck Lim</div><div class="stu-kor">임재혁</div><div class="stu-topic">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://superb-mandevilla-d00.notion.site/RESEARCH-TOPIC-2db7e5a2725d8077907af0d3d0bb8abb" target="_blank"><div class="stu-name">MyeongHyeon Kim</div><div class="stu-kor">김명현</div><div class="stu-topic">Physical AI</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://nettle-leaf-e45.notion.site/Jungyoon-Kim-2d163afe0c228021b6cedab4662cc47a" target="_blank"><div class="stu-name">JungYoon Kim</div><div class="stu-kor">김정윤</div><div class="stu-topic">인프라 기반 자율주행</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/RESEARCH-TOPIC-352b8e366ee3805291a6fd9265a3e579" target="_blank"><div class="stu-name">Yegi Yoo</div><div class="stu-kor">유예지</div><div class="stu-topic">재난·대피 시뮬레이션</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Research-Introduction-2deade7f673d8066bb4df7b6e8e898aa" target="_blank"><div class="stu-name">Reuben Tamakloe</div><div class="stu-kor">루벤</div><div class="stu-topic">도시 모빌리티 · 교통 데이터</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Research-Introduction-2d9be839890080b58f6edea92116f6e4" target="_blank"><div class="stu-name">Kexin Zhu</div><div class="stu-kor">주커신</div><div class="stu-topic">교통 데이터 분석</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Research-Topic-9fa71f1deee44b07b0e487f70d279a2d" target="_blank"><div class="stu-name">Mohammad Mahdi Babaye Khorasani</div><div class="stu-kor">마디</div><div class="stu-topic">자율주행 인프라 인지</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://www.notion.so/Research-Topic_Junyuk-2da26c4c7f2380578a55e1bc8f46fa86" target="_blank"><div class="stu-name">Junyuk Lee</div><div class="stu-kor">이준욱</div><div class="stu-topic">교통 데이터 분석</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://garnet-fur-e07.notion.site/RESEARCH-TOPIC-2ded0fc321d680398eedc31ea626e5fa" target="_blank"><div class="stu-name">Chungkyo Hong</div><div class="stu-kor">홍충교</div><div class="stu-topic">철도 인프라 (KORAIL)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <a class="stu" href="https://fishy-wave-483.notion.site/RESEARCH-TOPIC-2d9d7247888e8089bb4efc40b7b341a9" target="_blank"><div class="stu-name">Jihye Baek</div><div class="stu-kor">백지혜</div><div class="stu-topic">철도 인프라 (KORAIL)</div><span class="stu-go" data-ko="연구 소개 →" data-en="Research →">연구 소개 →</span></a>
+    <div class="stu nolink"><div class="stu-name">Taeho Oh</div><div class="stu-kor">오태호</div><div class="stu-topic">인프라 중심 자율주행 제어 (Infra-AV)</div></div>
+    <div class="stu nolink"><div class="stu-name">Yonghui Liu</div><div class="stu-kor">용휘</div><div class="stu-topic">자율주행 인프라</div></div>
+    <div class="stu nolink"><div class="stu-name">Hyeoncheol Noh</div><div class="stu-kor">노현철</div><div class="stu-topic">철도 인프라 (KORAIL)</div></div>
+  </div>
+
+  <div class="callout" style="margin-top:2rem" data-ko="키워드는 요약이며, 자세한 내용은 각 이름의 연구 소개 링크에서 확인하세요. 일부는 팀·영역 수준으로 표기돼 있습니다." data-en="Keywords are summaries; see each researcher's linked intro for details. Some are shown at team/area level.">키워드는 요약이며, 자세한 내용은 각 이름의 연구 소개 링크에서 확인하세요. 일부는 팀·영역 수준으로 표기돼 있습니다.</div>
+</div></section>
+
+<script src="tupa.js"></script>
+</body>
+</html>
