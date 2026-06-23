@@ -11,6 +11,36 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>(function(){var s=localStorage.getItem('tupa-theme');var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 <link rel="stylesheet" href="tupa.css">
+<style>
+.partlabel{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-fg);background:var(--accent-bg);padding:.28rem .75rem;border-radius:999px;margin-top:2.6rem}
+.parth{font-size:1.45rem;font-weight:800;color:var(--navy-deep);letter-spacing:-.01em;margin:.55rem 0 .3rem}
+.partsub{color:var(--ink-soft);font-size:.95rem;margin-bottom:1.1rem;max-width:46rem}
+.flow{display:flex;flex-direction:column;margin:.7rem 0 1.1rem}
+.fstep{display:grid;grid-template-columns:36px 1fr;gap:.95rem;padding-bottom:1.3rem;position:relative}
+.fstep:not(:last-child)::before{content:"";position:absolute;left:17px;top:36px;bottom:0;width:2px;background:var(--line)}
+.fstep-n{z-index:1;font-family:var(--f-mono);font-weight:600;font-size:.84rem;width:36px;height:36px;border-radius:50%;background:var(--accent-bg);color:var(--accent-fg);display:flex;align-items:center;justify-content:center}
+.fstep-b{padding-top:.3rem;min-width:0}
+.fstep-b h3{font-size:1.04rem;font-weight:700;color:var(--navy-deep);margin-bottom:.2rem}
+.fstep-b p{font-size:.9rem;color:var(--ink-soft)}
+.umock{margin-top:.75rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;max-width:440px;box-shadow:0 5px 16px var(--shadow)}
+.umock-h{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-muted);padding:.42rem .7rem;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.umock-c{padding:.7rem .85rem;display:flex;flex-direction:column;gap:.5rem}
+.urow{display:flex;align-items:center;gap:.55rem;font-size:.85rem;flex-wrap:wrap}
+.ukey{color:var(--ink-muted);min-width:60px;font-size:.78rem}
+.uval{color:var(--ink);font-weight:500}
+.upill{font-size:.72rem;font-weight:700;padding:.13rem .55rem;border-radius:999px;white-space:nowrap}
+.upill.draft{background:var(--surface-2);color:var(--ink-muted);border:1px solid var(--line)}
+.upill.done{background:color-mix(in oklch,var(--ok) 20%,var(--surface));color:var(--ok);border:1px solid color-mix(in oklch,var(--ok) 30%,var(--line))}
+.uarrow{color:var(--ink-muted)}
+.uhead{font-weight:700;color:var(--navy-deep);font-size:.86rem}
+.uli{font-size:.84rem;color:var(--ink-soft);padding-left:.95rem;position:relative}
+.uli::before{content:"•";position:absolute;left:.1rem;color:var(--navy-soft)}
+.uchk{display:inline-flex;align-items:center;gap:.45rem;font-size:.84rem;color:var(--ink)}
+.uchk i{width:16px;height:16px;border-radius:4px;background:var(--danger);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:.72rem;font-style:normal;flex:none}
+.ubar{height:9px;border-radius:99px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line);max-width:240px}
+.ubar i{display:block;height:100%;background:var(--navy-soft)}
+.umuted{color:var(--ink-muted);font-size:.8rem}
+</style>
 </head>
 <body>
 <div class="topbar"></div>
@@ -31,12 +61,63 @@
 <section><div class="wrap">
   <div class="callout" data-ko="<b>시작 전 준비:</b> 주간 리포트 작성에는 <b>Notion 로그인</b>과 <b>TUPA 워크스페이스 참여</b>가 필요합니다. 초대를 못 받았다면 관리자에게 요청하세요." data-en="<b>Before you start:</b> writing weekly reports requires a <b>Notion login</b> and <b>membership in the TUPA workspace</b>. If you have not been invited, ask the admin."><b>시작 전 준비:</b> 주간 리포트 작성에는 <b>Notion 로그인</b>과 <b>TUPA 워크스페이스 참여</b>가 필요합니다. 초대를 못 받았다면 관리자에게 요청하세요.</div>
 
-  <p class="sec-sub" style="margin-top:1.6rem;margin-bottom:.4rem" data-ko="<strong>이렇게 작성합니다</strong>" data-en="<strong>How to write</strong>"><strong>이렇게 작성합니다</strong></p>
+  <div class="partlabel" data-ko="STEP · 주간 리포트" data-en="STEP · Weekly report">STEP · 주간 리포트</div>
+  <h2 class="parth" data-ko="주간 리포트, 이렇게 작성합니다" data-en="How to write your weekly report">주간 리포트, 이렇게 작성합니다</h2>
+  <p class="partsub" data-ko="매주 5분이면 충분합니다. 아래 순서를 그대로 따라 하세요." data-en="Five minutes a week is enough. Just follow the steps below.">매주 5분이면 충분합니다. 아래 순서를 그대로 따라 하세요.</p>
   <a class="btn-notion" href="https://app.notion.com/p/eb187c2bfeed4b7aa4c44ca6f6ed81de" target="_blank" data-ko="📋 주간 리포트 DB 열기 →" data-en="📋 Open Weekly Report DB →">📋 주간 리포트 DB 열기 →</a>
-  <div class="steps">
-    <div class="step"><div class="stepn">1</div><h3 data-ko="내 항목 열기" data-en="Open your entry">내 항목 열기</h3><p data-ko='"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.' data-en='Open your <b>name + this week</b> entry in the Weekly Report DB. It is created for you each week.'>"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 미리 만들어집니다.</p></div>
-    <div class="step"><div class="stepn">2</div><h3 data-ko="칸 채우기" data-en="Fill the fields">칸 채우기</h3><p data-ko="아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝." data-en="Fill in the items below, all within Notion, no other tools.">아래 항목을 채웁니다. 다른 도구 필요 없이 Notion에서 끝.</p></div>
-    <div class="step"><div class="stepn">3</div><h3 data-ko="제출완료로" data-en="Mark as submitted">제출완료로</h3><p data-ko="다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다." data-en="When done, set the status to <code>제출완료</code> (Submitted). The rest is automatic.">다 쓰면 상태를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동입니다.</p></div>
+
+  <div class="flow">
+    <div class="fstep">
+      <div class="fstep-n">1</div>
+      <div class="fstep-b">
+        <h3 data-ko="내 항목 열기" data-en="Open your entry">내 항목 열기</h3>
+        <p data-ko='"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 월요일에 자동으로 미리 만들어져 있습니다.' data-en='In the Weekly Report DB, open the entry with <b>your name + this week</b>. It is created for you automatically every Monday.'>"주간 리포트" DB에서 <b>내 이름 + 이번 주차</b> 항목을 엽니다. 매주 월요일에 자동으로 미리 만들어져 있습니다.</p>
+        <div class="umock">
+          <div class="umock-h" data-ko="주간 리포트 DB" data-en="Weekly Report DB">주간 리포트 DB</div>
+          <div class="umock-c">
+            <div class="urow"><span class="uval">📄 박현철 · 2026-W26</span><span class="upill draft" data-ko="작성중" data-en="In progress">작성중</span></div>
+            <div class="urow"><span class="ukey" data-ko="그룹" data-en="Group">그룹</span><span class="uval">Physical AI</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fstep">
+      <div class="fstep-n">2</div>
+      <div class="fstep-b">
+        <h3 data-ko="섹션 채우기" data-en="Fill the sections">섹션 채우기</h3>
+        <p data-ko="이미 들어있는 제목 아래에 <b>글머리 기호로 한두 줄씩</b> 적으면 됩니다. 길게 쓸 필요 없이 핵심만. 이미지를 붙여넣으면 대시보드에도 같이 보입니다." data-en="Under each heading, just add <b>a line or two as bullet points</b>. Keep it short, essentials only. Pasted images also show on the dashboard.">이미 들어있는 제목 아래에 <b>글머리 기호로 한두 줄씩</b> 적으면 됩니다. 길게 쓸 필요 없이 핵심만. 이미지를 붙여넣으면 대시보드에도 같이 보입니다.</p>
+        <div class="umock">
+          <div class="umock-h">📄 박현철 · 2026-W26</div>
+          <div class="umock-c">
+            <div class="uhead">1. Done this week</div>
+            <div class="uli" data-ko="휴머노이드 보행 RL 보상함수 재설계, 평지 수렴 확인" data-en="Redesigned humanoid locomotion RL reward, flat-ground convergence confirmed">휴머노이드 보행 RL 보상함수 재설계, 평지 수렴 확인</div>
+            <div class="uhead">2. In progress</div>
+            <div class="uli" data-ko="경사면 보행 커리큘럼 학습" data-en="Curriculum learning for slope walking">경사면 보행 커리큘럼 학습</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fstep">
+      <div class="fstep-n">3</div>
+      <div class="fstep-b">
+        <h3 data-ko="막히면 체크박스 켜기" data-en="If stuck, tick the box">막히면 체크박스 켜기</h3>
+        <p data-ko="도움이 필요하면 <b>‘막힌것’ 체크박스</b>를 켜고 3번 섹션에 무엇이 막혔는지 적으세요. 대시보드 맨 위 빨간 패널로 바로 올라가 더 빨리 도움받습니다." data-en="Need help? Tick the <b>‘막힌것’ (blocked) checkbox</b> and write what is stuck in section 3. It jumps to the red panel at the top of the dashboard, so you get help faster.">도움이 필요하면 <b>‘막힌것’ 체크박스</b>를 켜고 3번 섹션에 무엇이 막혔는지 적으세요. 대시보드 맨 위 빨간 패널로 바로 올라가 더 빨리 도움받습니다.</p>
+        <div class="umock"><div class="umock-c">
+          <div class="uchk"><i>✓</i> <span data-ko="막힌것 (체크됨)" data-en="‘막힌것’ blocked (checked)">막힌것</span></div>
+          <div class="umuted" data-ko="→ 대시보드 ‘막힌 것 · 도움 필요’ 패널에 빨갛게 표시" data-en="→ shown in red in the dashboard ‘Blockers · Needs Help’ panel">→ 대시보드 ‘막힌 것 · 도움 필요’ 패널에 빨갛게 표시</div>
+        </div></div>
+      </div>
+    </div>
+    <div class="fstep">
+      <div class="fstep-n">4</div>
+      <div class="fstep-b">
+        <h3 data-ko="상태를 제출완료로" data-en="Set status to submitted">상태를 제출완료로</h3>
+        <p data-ko="다 썼으면 <b>상태</b>를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동, 최대 1분 뒤 대시보드에 반영됩니다." data-en="When done, change <b>status</b> to <code>제출완료</code> (Submitted). The rest is automatic, appearing on the dashboard within a minute.">다 썼으면 <b>상태</b>를 <code>제출완료</code>로 바꿉니다. 그 다음은 자동, 최대 1분 뒤 대시보드에 반영됩니다.</p>
+        <div class="umock"><div class="umock-c">
+          <div class="urow"><span class="ukey" data-ko="상태" data-en="Status">상태</span><span class="upill draft" data-ko="작성중" data-en="In progress">작성중</span><span class="uarrow">→</span><span class="upill done" data-ko="제출완료" data-en="Submitted">제출완료</span></div>
+        </div></div>
+      </div>
+    </div>
   </div>
 
   <p class="sec-sub" style="margin-top:1.8rem;margin-bottom:.4rem" data-ko="<strong>리포트 항목</strong>" data-en="<strong>Report fields</strong>"><strong>리포트 항목</strong></p>
@@ -56,6 +137,61 @@
   <div class="callout" data-ko="<b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다." data-en="<b>Deadline: every Friday 5 PM.</b> Each group lead checks members' submission status regularly."><b>제출 마감: 매주 금요일 오후 5시.</b> 각 그룹장은 그룹원의 제출 여부를 상시 확인합니다.</div>
 
   <div class="callout" style="border-left-color:var(--infra)" data-ko="<b>검토</b>: 제출한 리포트는 <b>그룹장과 교수님이 검토</b>합니다. 매번 답을 다는 것은 아니고, 필요한 경우에만 노션에 코멘트를 남깁니다." data-en="<b>Review</b>: submitted reports are <b>reviewed by the group lead and the professor</b>. They don't reply every time; they leave a comment in Notion only when needed."><b>검토</b>: 제출한 리포트는 <b>그룹장과 교수님이 검토</b>합니다. 매번 답을 다는 것은 아니고, 필요한 경우에만 노션에 코멘트를 남깁니다.</div>
+
+  <div class="partlabel" data-ko="STEP · 연구 프로젝트" data-en="STEP · Research project">STEP · 연구 프로젝트</div>
+  <h2 class="parth" data-ko="내 연구 프로젝트 추가하기" data-en="Add your research project">내 연구 프로젝트 추가하기</h2>
+  <p class="partsub" data-ko="진행 중인 내 연구를 등록하면 대시보드에서 <b>내 이름 아래 진행바와 함께</b> 표시됩니다. 프로젝트가 여러 개면 각각 한 줄씩 추가하세요." data-en="Register your ongoing research and it shows on the dashboard <b>under your name with a progress bar</b>. Have several projects? Add one row each.">진행 중인 내 연구를 등록하면 대시보드에서 <b>내 이름 아래 진행바와 함께</b> 표시됩니다. 프로젝트가 여러 개면 각각 한 줄씩 추가하세요.</p>
+  <a class="btn-notion" href="https://app.notion.com/p/2f09adeed4fb4b959e80e4ee07370e81" target="_blank" data-ko="🔬 연구 프로젝트 DB 열기 →" data-en="🔬 Open Research Project DB →">🔬 연구 프로젝트 DB 열기 →</a>
+
+  <div class="flow">
+    <div class="fstep">
+      <div class="fstep-n">1</div>
+      <div class="fstep-b">
+        <h3 data-ko="새 항목 만들기" data-en="Create a new entry">새 항목 만들기</h3>
+        <p data-ko="‘연구 프로젝트’ DB에서 <b>New(새로 만들기)</b>를 눌러 새 행을 추가합니다." data-en="In the Research Project DB, click <b>New</b> to add a row.">‘연구 프로젝트’ DB에서 <b>New(새로 만들기)</b>를 눌러 새 행을 추가합니다.</p>
+      </div>
+    </div>
+    <div class="fstep">
+      <div class="fstep-n">2</div>
+      <div class="fstep-b">
+        <h3 data-ko="항목 채우기" data-en="Fill the fields">항목 채우기</h3>
+        <p data-ko="아래 다섯 칸을 채웁니다. <b>연구원은 본인 이름</b>을 꼭 선택하세요. 그래야 대시보드 내 이름 아래로 들어갑니다." data-en="Fill the five fields below. Be sure to pick <b>your own name</b> in 연구원 (Researcher), so it lands under you on the dashboard.">아래 다섯 칸을 채웁니다. <b>연구원은 본인 이름</b>을 꼭 선택하세요. 그래야 대시보드 내 이름 아래로 들어갑니다.</p>
+        <div class="umock">
+          <div class="umock-h" data-ko="연구 프로젝트 · 새 항목" data-en="Research Project · new entry">연구 프로젝트 · 새 항목</div>
+          <div class="umock-c">
+            <div class="urow"><span class="ukey" data-ko="연구명" data-en="Title">연구명</span><span class="uval" data-ko="V2X 인지 휴머노이드 드라이버" data-en="V2X-aware humanoid driver">V2X 인지 휴머노이드 드라이버</span></div>
+            <div class="urow"><span class="ukey" data-ko="연구원" data-en="Researcher">연구원</span><span class="upill" style="background:color-mix(in oklch,var(--physical) 18%,var(--surface));color:var(--physical);border:1px solid color-mix(in oklch,var(--physical) 30%,var(--line))">박현철</span></div>
+            <div class="urow"><span class="ukey" data-ko="진행률" data-en="Progress">진행률</span><span class="uval">65</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fstep">
+      <div class="fstep-n">3</div>
+      <div class="fstep-b">
+        <h3 data-ko="끝, 자동 반영" data-en="Done, it syncs">끝, 자동 반영</h3>
+        <p data-ko="저장만 하면 끝입니다. 대시보드 내 이름 아래에 <b>진행바와 함께</b> 자동으로 나타납니다." data-en="Just save. It appears under your name on the dashboard <b>with a progress bar</b>, automatically.">저장만 하면 끝입니다. 대시보드 내 이름 아래에 <b>진행바와 함께</b> 자동으로 나타납니다.</p>
+        <div class="umock">
+          <div class="umock-h" data-ko="대시보드 · 내 연구" data-en="Dashboard · My research">대시보드 · 내 연구</div>
+          <div class="umock-c">
+            <div class="urow"><span class="uval" data-ko="V2X 인지 휴머노이드 드라이버" data-en="V2X-aware humanoid driver">V2X 인지 휴머노이드 드라이버</span><span class="umuted">65%</span></div>
+            <div class="ubar"><i style="width:65%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sec-sub" style="margin-top:1.4rem;margin-bottom:.4rem" data-ko="<strong>연구 프로젝트 항목</strong>" data-en="<strong>Research project fields</strong>"><strong>연구 프로젝트 항목</strong></p>
+  <ul class="fields" style="grid-template-columns:1fr">
+    <li data-ko="<b>연구명</b>: 프로젝트 이름. 짧고 분명하게." data-en="<b>연구명 (Title)</b>: the project name, short and clear."><b>연구명</b>: 프로젝트 이름. 짧고 분명하게.</li>
+    <li data-ko="<b>연구원</b>: 드롭다운에서 <b>본인 이름</b> 선택." data-en="<b>연구원 (Researcher)</b>: pick <b>your own name</b> from the dropdown."><b>연구원</b>: 드롭다운에서 <b>본인 이름</b> 선택.</li>
+    <li data-ko="<b>연구목적</b>: 이 연구로 무엇을 밝히려는지 1~2문장." data-en="<b>연구목적 (Purpose)</b>: what you aim to find out, in 1-2 sentences."><b>연구목적</b>: 이 연구로 무엇을 밝히려는지 1~2문장.</li>
+    <li data-ko="<b>방법론</b>: 어떤 데이터·모델·실험을 쓰는지 간결히." data-en="<b>방법론 (Method)</b>: what data, models, or experiments you use, briefly."><b>방법론</b>: 어떤 데이터·모델·실험을 쓰는지 간결히.</li>
+    <li data-ko="<b>진행률</b>: 0~100 숫자. 대시보드 진행바로 표시되니 가끔 갱신하세요." data-en="<b>진행률 (Progress)</b>: a number 0 to 100. It drives the progress bar, so update it now and then."><b>진행률</b>: 0~100 숫자. 대시보드 진행바로 표시되니 가끔 갱신하세요.</li>
+  </ul>
+
+  <div class="callout info" data-ko="<b>💡 클릭하면 상세히 보입니다.</b> 대시보드에서 연구 프로젝트를 누르면 <b>연구목적·방법론</b>이 펼쳐집니다. 이 두 칸을 채워두면 다른 사람도 내 연구를 이해하기 쉽습니다." data-en="<b>💡 Click for details.</b> Clicking a project on the dashboard expands its <b>purpose and method</b>. Filling those helps others understand your work."><b>💡 클릭하면 상세히 보입니다.</b> 대시보드에서 연구 프로젝트를 누르면 <b>연구목적·방법론</b>이 펼쳐집니다. 이 두 칸을 채워두면 다른 사람도 내 연구를 이해하기 쉽습니다.</div>
 
   <p class="sec-sub" style="margin-top:1.9rem;margin-bottom:.4rem" data-ko="<strong>한눈에 보는 라이브 대시보드</strong>" data-en="<strong>Live dashboard at a glance</strong>"><strong>한눈에 보는 라이브 대시보드</strong></p>
   <p class="sec-sub" style="margin-top:0" data-ko="그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다." data-en="Group status · project schedules · individual research · submission status · calendar, all in real time. Notion edits appear within <b>~1 minute</b>.">그룹별 현황 · 프로젝트 일정 · 개인 연구 · 제출 현황 · 일정 캘린더를 실시간으로 모아 봅니다. 노션에 쓰면 <b>최대 1분 뒤 자동 반영</b>됩니다.</p>
